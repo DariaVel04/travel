@@ -1,1 +1,1 @@
-# fs-projekti-DariaVel04
+# Ai travel planner
