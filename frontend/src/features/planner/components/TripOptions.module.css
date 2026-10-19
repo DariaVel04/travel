@@ -1,0 +1,147 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.title {
+  font-size: var(--font-size-xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.5rem), 1fr));
+  gap: var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+}
+
+.selectedCard {
+  outline: 2px solid var(--color-primary);
+}
+
+.media {
+  aspect-ratio: 16 / 10;
+  background: var(--color-surface-muted);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+.destination {
+  font-size: var(--font-size-lg);
+}
+
+.dates,
+.meta {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-muted);
+  font-size: var(--font-size-xs);
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  align-items: baseline;
+  font-family: var(--font-serif);
+  font-size: var(--font-size-sm);
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  font-size: var(--font-size-sm);
+}
+
+.bar,
+.barActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.bar {
+  justify-content: space-between;
+}
+
+.compareList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: var(--space-4);
+  padding: 0;
+  list-style: none;
+}
+
+.compareCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.compareDl {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.compareDl div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.compareDl dt {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .bar,
+  .barActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .barActions > * {
+    width: 100%;
+    min-height: 44px;
+  }
+}
