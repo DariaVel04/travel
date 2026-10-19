@@ -1,0 +1,51 @@
+.hero {
+  padding-block: clamp(var(--space-6), 6vw, 4.25rem);
+  background:
+    linear-gradient(180deg, rgb(22 56 47 / 0.18), transparent 42%),
+    linear-gradient(135deg, var(--color-hero-from), var(--color-hero-to));
+  color: var(--color-on-hero);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  max-width: 42rem;
+}
+
+.badge {
+  padding: 0.3rem 0.75rem;
+  border: 1px solid rgb(255 255 255 / 0.22);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgb(255 255 255 / 0.88);
+}
+
+.title {
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.035em;
+}
+
+.subtitle {
+  max-width: 54ch;
+  font-size: var(--font-size-md);
+  line-height: 1.65;
+  color: rgb(255 255 255 / 0.78);
+}
+
+@media (max-width: 375px) {
+  .hero {
+    padding-block: var(--space-6);
+  }
+}
