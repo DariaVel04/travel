@@ -1,0 +1,91 @@
+<h2>Which visual direction should the whole site use?</h2>
+<p class="subtitle">Same pages and navigation. Only color, type, and surfaces change. Click the one that should become the design.</p>
+
+<div class="cards">
+  <div class="card" data-choice="coastal" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="font-family:Georgia,'Iowan Old Style',Palatino,serif;background:#f4efe6;color:#1c1915;border-radius:10px;overflow:hidden;border:1px solid #e4d9c8;">
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#fbf8f3;border-bottom:1px solid #e4d9c8;font-family:system-ui,sans-serif;font-size:11px;">
+          <strong>AI Travel Planner</strong>
+          <span style="color:#6b6258;">Home</span>
+          <span style="color:#6b6258;">Flights</span>
+          <span style="color:#6b6258;">Hotels</span>
+          <span style="margin-left:auto;padding:3px 8px;border-radius:999px;background:#1f6f5b;color:#fff;">Account</span>
+        </div>
+        <div style="padding:16px 14px 12px;background:linear-gradient(160deg,#16382f,#1f6f5b);color:#f6f1e7;">
+          <div style="font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.75;">Early preview</div>
+          <div style="font-size:22px;line-height:1.15;margin-top:6px;">Plan the whole trip,<br>not just the ticket.</div>
+        </div>
+        <div style="margin:10px 12px 12px;padding:10px;background:#fffdf8;border:1px solid #e4d9c8;border-radius:12px;font-family:system-ui,sans-serif;font-size:11px;color:#6b6258;">
+          <div style="display:flex;gap:8px;">
+            <div style="flex:1;padding:8px;border-radius:8px;background:#f4efe6;">From · Helsinki</div>
+            <div style="flex:1;padding:8px;border-radius:8px;background:#f4efe6;">To · Everywhere</div>
+            <div style="padding:8px 12px;border-radius:8px;background:#1f6f5b;color:#fff;font-weight:600;">Search</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A · Coastal editorial</h3>
+      <p>Warm paper, deep sea green, serif headlines. Feels like a travel magazine, not a dashboard. Recommended.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="atlas" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="font-family:system-ui,sans-serif;background:#12161c;color:#e8edf2;border-radius:10px;overflow:hidden;border:1px solid #2a3340;">
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#0e1218;border-bottom:1px solid #2a3340;font-size:11px;">
+          <strong>AI Travel Planner</strong>
+          <span style="color:#8b97a6;">Home</span>
+          <span style="color:#8b97a6;">Flights</span>
+          <span style="color:#8b97a6;">Hotels</span>
+          <span style="margin-left:auto;padding:3px 8px;border-radius:6px;background:#e0a15a;color:#1a1208;">Account</span>
+        </div>
+        <div style="padding:16px 14px 12px;background:repeating-linear-gradient(90deg,#161c24,#161c24 18px,#1c2430 18px,#1c2430 19px);">
+          <div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#e0a15a;">Early preview</div>
+          <div style="font-size:20px;font-weight:650;letter-spacing:-.03em;line-height:1.2;margin-top:6px;">Plan the whole trip,<br>not just the ticket.</div>
+        </div>
+        <div style="margin:10px 12px 12px;padding:10px;background:#1a212b;border:1px solid #2a3340;border-radius:8px;font-size:11px;color:#8b97a6;">
+          <div style="display:flex;gap:8px;">
+            <div style="flex:1;padding:8px;border-radius:6px;background:#12161c;border:1px solid #2a3340;">From · Helsinki</div>
+            <div style="flex:1;padding:8px;border-radius:6px;background:#12161c;border:1px solid #2a3340;">To · Everywhere</div>
+            <div style="padding:8px 12px;border-radius:6px;background:#e0a15a;color:#1a1208;font-weight:700;">Search</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B · Night atlas</h3>
+      <p>Charcoal surfaces, map-grid lines, amber for actions and prices. More instrument than magazine. Darker to read for long forms.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="booking" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="font-family:system-ui,sans-serif;background:#f7f9fc;color:#102033;border-radius:10px;overflow:hidden;border:1px solid #d7e0ea;">
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:#fff;border-bottom:1px solid #d7e0ea;font-size:11px;">
+          <strong style="color:#0b63ce;">AI Travel Planner</strong>
+          <span style="color:#5c6b7a;">Home</span>
+          <span style="color:#5c6b7a;">Flights</span>
+          <span style="color:#5c6b7a;">Hotels</span>
+          <span style="margin-left:auto;padding:3px 8px;border-radius:8px;background:#0b63ce;color:#fff;">Account</span>
+        </div>
+        <div style="padding:16px 14px 8px;background:#fff;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0b63ce;">Early preview</div>
+          <div style="font-size:20px;font-weight:750;letter-spacing:-.03em;line-height:1.2;margin-top:6px;">Plan the whole trip,<br>not just the ticket.</div>
+        </div>
+        <div style="margin:8px 12px 12px;padding:10px;background:#fff;border:1px solid #d7e0ea;border-radius:14px;box-shadow:0 8px 24px rgb(16 32 51 / .06);font-size:11px;color:#5c6b7a;">
+          <div style="display:flex;gap:8px;">
+            <div style="flex:1;padding:8px;border-radius:8px;background:#f7f9fc;border:1px solid #d7e0ea;">From · Helsinki</div>
+            <div style="flex:1;padding:8px;border-radius:8px;background:#f7f9fc;border:1px solid #d7e0ea;">To · Everywhere</div>
+            <div style="padding:8px 12px;border-radius:8px;background:#0b63ce;color:#fff;font-weight:700;">Search</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C · Bright booking</h3>
+      <p>White space, strong blue buttons, familiar flight-search look. Clear and fast, closer to every other travel site.</p>
+    </div>
+  </div>
+</div>

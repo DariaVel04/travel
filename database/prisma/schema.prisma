@@ -1,0 +1,301 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserStatus {
+  ACTIVE
+  SUSPENDED
+  DELETED
+}
+
+enum SubscriptionPlan {
+  FREE
+  PREMIUM
+}
+
+enum TripStatus {
+  DRAFT
+  PLANNED
+  CONFIRMED
+  ARCHIVED
+}
+
+enum TransportType {
+  FLIGHT
+  TRAIN
+  BUS
+  CAR
+  FERRY
+  PUBLIC_TRANSPORT
+  TAXI
+  RENTAL_CAR
+  WALK
+  MIXED
+}
+
+enum CabinClass {
+  ECONOMY
+  PREMIUM_ECONOMY
+  BUSINESS
+  FIRST
+}
+
+enum AccommodationType {
+  HOTEL
+  APARTMENT
+  HOSTEL
+  GUESTHOUSE
+  RESORT
+  VILLA
+  APARTHOTEL
+}
+
+enum TripCostCategory {
+  TRANSPORT
+  ACCOMMODATION
+  BAGGAGE
+  FOOD
+  LOCAL_TRANSPORT
+  ACTIVITIES
+  INSURANCE
+  VISA
+  FEES
+  OTHER
+}
+
+enum ActivityCategory {
+  SIGHTSEEING
+  FOOD
+  TRANSPORT
+  NATURE
+  CULTURE
+  SHOPPING
+  WELLNESS
+  ENTERTAINMENT
+  OTHER
+}
+
+model User {
+  id                     String           @id @default(cuid())
+  email                  String           @unique
+  name                   String
+  passwordHash           String
+  status                 UserStatus       @default(ACTIVE)
+  subscriptionPlan       SubscriptionPlan @default(FREE)
+  subscriptionStartedAt  DateTime?
+  subscriptionExpiresAt  DateTime?
+  createdAt              DateTime         @default(now())
+  updatedAt              DateTime         @updatedAt
+  trips                  Trip[]
+  sessions               Session[]
+
+  @@index([status])
+  @@index([subscriptionPlan])
+  @@map("users")
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  tokenHash String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("sessions")
+}
+
+model Trip {
+  id                   String          @id @default(cuid())
+  userId               String?
+  title                String
+  destinationName      String?
+  destinationType      String?
+  destinationCode      String?
+  destinationPlaceId   String?
+  startDate            DateTime?       @db.Date
+  endDate              DateTime?       @db.Date
+  travelers            Json
+  currency             String          @db.VarChar(3)
+  budgetMinor          Int?
+  totalEstimatedCost   Int             @default(0)
+  status               TripStatus      @default(DRAFT)
+  selectedTripOptionId String?
+  transportMode        String?
+  preferences          Json?
+  createdAt            DateTime        @default(now())
+  updatedAt            DateTime        @updatedAt
+  user                 User?           @relation(fields: [userId], references: [id], onDelete: SetNull)
+  options              TripOption[]
+  transports           Transport[]
+  accommodations       Accommodation[]
+  itinerary            Itinerary?
+  costs                TripCost[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([startDate, endDate])
+  @@map("trips")
+}
+
+/// Generated Vacation Planner options (~5 per trip). Summaries stay as small JSON.
+model TripOption {
+  id                    String          @id @default(cuid())
+  tripId                String
+  destinationName       String
+  destinationType       String?
+  destinationCode       String?
+  destinationPlaceId    String?
+  country               String?
+  countryCode           String?         @db.VarChar(2)
+  startDate             DateTime        @db.Date
+  endDate               DateTime        @db.Date
+  durationDays          Int
+  travelers             Json
+  totalPriceMinor       Int
+  currency              String          @db.VarChar(3)
+  transportSummary      Json
+  accommodationSummary  Json
+  highlights            Json
+  imageUrl              String?
+  createdAt             DateTime        @default(now())
+  trip                  Trip            @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  transports            Transport[]
+  accommodations        Accommodation[]
+
+  @@index([tripId])
+  @@map("trip_options")
+}
+
+model Transport {
+  id                 String         @id @default(cuid())
+  tripId             String?
+  tripOptionId       String?
+  type               TransportType
+  provider           String?
+  departureLocation  String
+  arrivalLocation    String
+  departureTime      DateTime?
+  arrivalTime        DateTime?
+  durationMinutes    Int?
+  priceMinor         Int
+  currency           String         @db.VarChar(3)
+  stops              Int            @default(0)
+  baggage            String?
+  cabinClass         CabinClass?
+  overnight          Boolean        @default(false)
+  /// Journey segments for mixed / multi-leg routes.
+  segments           Json?
+  sourceOfferId      String?
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+  trip               Trip?          @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  tripOption         TripOption?    @relation(fields: [tripOptionId], references: [id], onDelete: SetNull)
+
+  @@index([tripId])
+  @@index([tripOptionId])
+  @@index([type])
+  @@map("transports")
+}
+
+model Accommodation {
+  id                 String             @id @default(cuid())
+  tripId             String?
+  tripOptionId       String?
+  name               String
+  destination        String
+  address            String?
+  type               AccommodationType
+  rating             Decimal            @db.Decimal(2, 1)
+  pricePerNightMinor Int
+  totalPriceMinor    Int
+  currency           String             @db.VarChar(3)
+  amenities          Json
+  checkIn            DateTime?          @db.Date
+  checkOut           DateTime?          @db.Date
+  guests             Int?
+  nights             Int?
+  country            String?
+  countryCode        String?            @db.VarChar(2)
+  breakfastIncluded  Boolean            @default(false)
+  freeCancellation   Boolean            @default(false)
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+  trip               Trip?              @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  tripOption         TripOption?        @relation(fields: [tripOptionId], references: [id], onDelete: SetNull)
+
+  @@index([tripId])
+  @@index([tripOptionId])
+  @@index([destination])
+  @@map("accommodations")
+}
+
+model Itinerary {
+  id        String         @id @default(cuid())
+  tripId    String         @unique
+  title     String?
+  summary   String?
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+  trip      Trip           @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  days      ItineraryDay[]
+
+  @@map("itineraries")
+}
+
+model ItineraryDay {
+  id                 String     @id @default(cuid())
+  itineraryId        String
+  dayNumber          Int
+  date               DateTime   @db.Date
+  title              String
+  description        String?    @db.Text
+  estimatedCostMinor Int        @default(0)
+  currency           String     @db.VarChar(3)
+  itinerary          Itinerary  @relation(fields: [itineraryId], references: [id], onDelete: Cascade)
+  activities         Activity[]
+
+  @@unique([itineraryId, dayNumber])
+  @@index([itineraryId])
+  @@map("itinerary_days")
+}
+
+model Activity {
+  id                 String           @id @default(cuid())
+  itineraryDayId     String
+  title              String
+  description        String?          @db.Text
+  category           ActivityCategory
+  location           String?
+  startTime          DateTime?
+  endTime            DateTime?
+  estimatedCostMinor Int              @default(0)
+  currency           String           @db.VarChar(3)
+  sortOrder          Int              @default(0)
+  day                ItineraryDay     @relation(fields: [itineraryDayId], references: [id], onDelete: Cascade)
+
+  @@index([itineraryDayId])
+  @@map("activities")
+}
+
+model TripCost {
+  id           String           @id @default(cuid())
+  tripId       String
+  category     TripCostCategory
+  amountMinor  Int
+  currency     String           @db.VarChar(3)
+  description  String?
+  createdAt    DateTime         @default(now())
+  trip         Trip             @relation(fields: [tripId], references: [id], onDelete: Cascade)
+
+  @@index([tripId])
+  @@index([tripId, category])
+  @@map("trip_costs")
+}

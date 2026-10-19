@@ -1,0 +1,76 @@
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  padding: 4px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-muted);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.segment {
+  position: relative;
+}
+
+.segmentLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.segment:hover .segmentLabel {
+  color: var(--color-text);
+}
+
+.segment input:checked + .segmentLabel {
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.segment input:focus-visible + .segmentLabel {
+  outline: var(--focus-ring);
+  outline-offset: 1px;
+}
+
+.compact {
+  gap: 2px;
+  padding: 3px;
+}
+
+.compact .segmentLabel {
+  min-height: 32px;
+  padding: 0.25rem 0.6rem;
+  font-size: var(--font-size-xs);
+}
+
+@media (max-width: 640px) {
+  .group {
+    width: 100%;
+  }
+
+  .segment {
+    flex: 1 1 auto;
+  }
+
+  .segmentLabel {
+    min-height: 40px;
+    text-align: center;
+  }
+
+  .compact .segmentLabel {
+    min-height: 36px;
+  }
+}

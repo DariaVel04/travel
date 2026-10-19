@@ -1,0 +1,89 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: var(--space-3);
+}
+
+.guestGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 148px), 1fr));
+  gap: var(--space-3);
+}
+
+.ages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 120px), 8rem));
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.stepperField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.stepperLabel {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.stepperButton {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  font-size: var(--font-size-lg);
+  line-height: 1;
+}
+
+.stepperButton:hover:not(:disabled) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.stepperButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.stepperInput {
+  width: 56px;
+  min-width: 0;
+  text-align: center;
+}
+
+.stepperInput::-webkit-outer-spin-button,
+.stepperInput::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.stepperInput[type='number'] {
+  appearance: textfield;
+}
+
+.submitRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .submitRow > * {
+    width: 100%;
+  }
+}

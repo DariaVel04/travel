@@ -1,0 +1,845 @@
+{
+  "app": {
+    "name": "AI Travel Planner",
+    "homeTitle": "Plan your entire trip with AI"
+  },
+  "nav": {
+    "mainNavigation": "Main navigation",
+    "home": "Home",
+    "flights": "Flights",
+    "hotels": "Hotels",
+    "planner": "Vacation Planner",
+    "login": "Log in",
+    "loginComingSoon": "Accounts are coming soon",
+    "register": "Create account",
+    "account": "Account",
+    "logout": "Log out",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "auth": {
+    "login": {
+      "title": "Log in",
+      "subtitle": "Sign in to manage your account and saved trips.",
+      "submit": "Log in",
+      "submitting": "Signing in…",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Create one"
+    },
+    "register": {
+      "title": "Create account",
+      "subtitle": "Register to keep your trip plans in one place.",
+      "submit": "Create account",
+      "submitting": "Creating account…",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Log in"
+    },
+    "account": {
+      "title": "Account",
+      "subtitle": "Your profile and account settings.",
+      "overview": "Account",
+      "status": "Status",
+      "plan": "Plan",
+      "memberSince": "Member since",
+      "editProfile": "Edit profile",
+      "saveProfile": "Save changes",
+      "saving": "Saving…",
+      "profileSaved": "Profile updated.",
+      "changePassword": "Change password",
+      "savePassword": "Update password",
+      "passwordSaved": "Password updated."
+    },
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "passwordHint": "At least {{min}} characters"
+    },
+    "status": {
+      "ACTIVE": "Active",
+      "SUSPENDED": "Suspended",
+      "DELETED": "Deleted"
+    },
+    "plan": {
+      "FREE": "Free",
+      "PREMIUM": "Premium"
+    },
+    "validation": {
+      "nameRequired": "Enter your name.",
+      "nameTooLong": "Name is too long.",
+      "emailRequired": "Enter your email.",
+      "emailInvalid": "Enter a valid email address.",
+      "passwordRequired": "Enter your password.",
+      "passwordMin": "Password must be at least 8 characters.",
+      "passwordMax": "Password is too long.",
+      "confirmRequired": "Confirm your password.",
+      "passwordMismatch": "Passwords do not match.",
+      "currentPasswordRequired": "Enter your current password."
+    },
+    "errors": {
+      "invalidCredentials": "Invalid email or password.",
+      "emailTaken": "An account with this email already exists.",
+      "invalidInput": "Please check the form and try again.",
+      "unavailable": "The account service is temporarily unavailable.",
+      "currentPassword": "Current password is incorrect.",
+      "generic": "Something went wrong. Please try again."
+    }
+  },
+  "language": {
+    "label": "Language"
+  },
+  "locationSelector": {
+    "anywhere": "Everywhere",
+    "anywhereDescription": "Consider every destination",
+    "typedCityDescription": "Use this city name",
+    "addMore": "Add another…",
+    "maxReached": "Maximum number of locations selected",
+    "remove": "Remove {{name}}",
+    "searching": "Searching…",
+    "noResults": "No locations found for “{{query}}”",
+    "types": {
+      "airport": "Airport",
+      "city": "City",
+      "country": "Country",
+      "continent": "Continent",
+      "region": "Region"
+    }
+  },
+  "common": {
+    "comingSoon": "Coming soon",
+    "duration": "{{hours}} h {{minutes}} min",
+    "minutes": "{{count}} min",
+    "days_one": "{{count}} day",
+    "days_other": "{{count}} days",
+    "months_one": "{{count}} month",
+    "months_other": "{{count}} months",
+    "travellers_one": "{{count}} traveller",
+    "travellers_other": "{{count}} travellers",
+    "severity": {
+      "low": "minor",
+      "medium": "moderate",
+      "high": "major"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "Early preview",
+      "title": "Plan your entire trip with AI",
+      "subtitle": "We compare flights, stays, tour packages and ways to get around — and show which option is truly best for your whole trip, not just the cheapest ticket."
+    },
+    "search": {
+      "tabsLabel": "What do you want to do?",
+      "flightsTab": "Flights",
+      "plannerTab": "Vacation Planner",
+      "fromLabel": "From",
+      "fromPlaceholder": "Everywhere, continent, country — or type a city",
+      "toLabel": "To",
+      "toPlaceholder": "Everywhere, continent, country — or type a city",
+      "destinationLabel": "Where would you like to go?",
+      "destinationPlaceholder": "Everywhere, continent, country — or type a city",
+      "tripTypeLabel": "Trip type",
+      "searchFlights": "Search flights",
+      "startPlanning": "Start planning"
+    },
+    "features": {
+      "title": "One platform for the whole trip",
+      "subtitle": "We don't sell tickets. We compare options from many partners and help you pick what fits you best.",
+      "smartFlights": {
+        "title": "Smart Flight Search",
+        "description": "Search from several airports at once with flexible dates and trip lengths — across airlines, travel agencies and charters."
+      },
+      "vacationPlanner": {
+        "title": "AI Vacation Planner",
+        "description": "Describe your group, budget and interests and get destinations, stays and a day-by-day plan."
+      },
+      "totalCost": {
+        "title": "Total Trip Cost",
+        "description": "See what the whole trip really costs: flights, stay, food, local transport and extras.",
+        "example": "Flights {{flights}} · Stay {{stay}} · Transport {{transport}}"
+      },
+      "climate": {
+        "title": "Climate Intelligence",
+        "description": "Temperature, rain, humidity and seasonal risks like monsoons, jellyfish or pollen — before you pick dates."
+      },
+      "pricePrediction": {
+        "title": "Price Prediction",
+        "description": "Know whether a price is good by comparing it with historical prices and trends.",
+        "example": "Now {{current}} · usually {{average}}"
+      },
+      "tourDeals": {
+        "title": "Tour & Charter Deals",
+        "description": "Compare booking flight and hotel separately with tour operator packages and charter flights.",
+        "example": "Package saves {{amount}}"
+      }
+    }
+  },
+  "flights": {
+    "pageTitle": "Travel & transport search",
+    "pageSubtitle": "Search a whole journey with flights, trains, buses, ferries, cars or mixed transport. Outbound and return can use different cities.",
+    "form": {
+      "tripKindLabel": "Journey type",
+      "tripKind": {
+        "round_trip": "Round trip",
+        "one_way": "One way",
+        "multi_city": "Multi-city",
+        "open_jaw": "Open-jaw"
+      },
+      "transportLabel": "Transport",
+      "transportHint": "Mixed transport combines several ways of travelling in one journey.",
+      "transport": {
+        "flight": "Flight",
+        "train": "Train",
+        "bus": "Bus",
+        "car": "Car",
+        "ferry": "Ferry",
+        "any": "Any",
+        "mixed": "Mixed transport"
+      },
+      "mixedModesLabel": "Combine",
+      "mixedModesHint": "Choose at least two types. Route optimisation is not applied yet.",
+      "legOutbound": "Outbound",
+      "legReturn": "Return",
+      "legNumber": "Journey {{number}}",
+      "addLeg": "Add city",
+      "removeLeg": "Remove",
+      "openJawHint": "Return can start from a different city than the outbound arrival.",
+      "differentCitiesHint": "Outbound and return do not have to use the same cities.",
+      "multiCityHint": "Each hop can use different places. Transport combinations appear in the results.",
+      "originsLabel": "From",
+      "originsHint": "Add one or more places",
+      "destinationsLabel": "To",
+      "destinationsHint": "Add one or more places — or choose Anywhere",
+      "dateModeLabel": "Travel dates",
+      "dateMode": {
+        "exact": "Exact dates",
+        "range": "Date range",
+        "flexible": "Flexible",
+        "months": "Whole months",
+        "cheapest": "Cheapest period"
+      },
+      "departureDate": "Departure date",
+      "returnDate": "Return date",
+      "rangeFrom": "Earliest departure",
+      "rangeTo": "Latest return",
+      "flexDate": "Around",
+      "flexDays": "Flexibility",
+      "flexDaysOption": "± {{count}} days",
+      "monthsLabel": "Choose one or more months",
+      "cheapestWithin": "Search within the next",
+      "durationLabel": "Trip duration",
+      "customDuration": "Custom",
+      "minDays": "Min. days",
+      "maxDays": "Max. days",
+      "passengersLabel": "Passengers",
+      "adults": "Adults",
+      "children": "Children (2–11)",
+      "infants": "Infants (under 2)",
+      "passengersTotal": "Total",
+      "decrease": "Decrease {{label}}",
+      "increase": "Increase {{label}}",
+      "cabinClassLabel": "Cabin class",
+      "cabinClass": {
+        "economy": "Economy",
+        "premium_economy": "Premium Economy",
+        "business": "Business",
+        "first": "First Class"
+      },
+      "stopsLabel": "Stops / transfers",
+      "stops": {
+        "any": "Any",
+        "nonstop": "Non-stop",
+        "one": "1 transfer",
+        "two_plus": "2+ transfers"
+      },
+      "baggageLabel": "Baggage",
+      "baggage": {
+        "none": "No checked baggage",
+        "one": "1 checked bag",
+        "two": "2 checked bags"
+      },
+      "departureTimeLabel": "Departure time",
+      "departureTime": {
+        "any": "Any",
+        "morning": "Morning",
+        "afternoon": "Afternoon",
+        "evening": "Evening",
+        "night": "Night"
+      },
+      "overnightLabel": "Overnight travel",
+      "overnight": {
+        "any": "Any",
+        "avoid": "Avoid overnight travel",
+        "allowed": "Overnight travel allowed"
+      },
+      "preferenceLabel": "Journey preference",
+      "preferenceHint": "Saved for a later search and AI ranking step. Not applied to these demo results.",
+      "preference": {
+        "cheapest": "Cheapest",
+        "fastest": "Fastest",
+        "fewer_transfers": "Fewer transfers",
+        "comfortable": "More comfortable journey"
+      },
+      "sourcesLabel": "Where to search",
+      "sourcesHint": "Tour operators sometimes sell cheaper charter seats that regular flight search doesn't show.",
+      "sources": {
+        "airline": "Airlines",
+        "ota": "Online travel agencies",
+        "tour_operator": "Tour operators",
+        "charter": "Charter flights",
+        "package": "Package deals"
+      },
+      "submit": "Search journeys",
+      "searching": "Searching…"
+    },
+    "results": {
+      "title": "Journey options",
+      "count_one": "{{count}} option found",
+      "count_other": "{{count}} options found",
+      "idle": "Enter your journey details and start a search.",
+      "empty": "No demo journeys match these filters.",
+      "demoNotice": "These are demo results to illustrate journeys — not real availability. Partner search is not connected yet.",
+      "demoBadge": "Demo",
+      "mixed": "Mixed transport",
+      "outbound": "Outbound",
+      "inbound": "Return",
+      "leg": "Journey",
+      "transfers_one": "{{count}} transfer",
+      "transfers_other": "{{count}} transfers",
+      "notCheapestOnly": "Cheapest isn't always best. Each option shows total travel time and inconveniences next to the price.",
+      "direct": "Direct",
+      "stops_one": "{{count}} stop",
+      "stops_other": "{{count}} stops",
+      "via": "via {{airports}}",
+      "nextDay": "+{{count}}",
+      "totalPrice": "Total price",
+      "priceBreakdown": "Price breakdown",
+      "breakdown": {
+        "base": "Ticket",
+        "baggage": "Baggage",
+        "fees": "Fees",
+        "transfer": "Transfer"
+      },
+      "convenienceScore": "Convenience score",
+      "noInconveniences": "No notable inconveniences",
+      "inconveniencesLabel": "Things to know",
+      "viewDeal": "View at {{partner}}",
+      "partnerDisclosure": "Opens partner site"
+    },
+    "sourceType": {
+      "airline": "Airline",
+      "ota": "Travel agency",
+      "tour_operator": "Tour operator",
+      "charter": "Charter",
+      "package": "Package"
+    },
+    "tags": {
+      "special_offer": "Special offer",
+      "last_minute": "Last minute"
+    }
+  },
+  "hotels": {
+    "pageTitle": "Hotels & stays",
+    "pageSubtitle": "Compare hotels, apartments and other stays for your trip. These are demo results — not real availability.",
+    "form": {
+      "destinationLabel": "Where",
+      "destinationHint": "Everywhere, a continent, a country — or type any city",
+      "destinationPlaceholder": "Everywhere, continent, country — or type a city",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "nights_one": "{{count}} night",
+      "nights_other": "{{count}} nights",
+      "guestsLabel": "Guests and rooms",
+      "adults": "Adults",
+      "children": "Children",
+      "rooms": "Rooms",
+      "childAge": "Age of child {{number}}",
+      "typeLabel": "Accommodation type",
+      "decrease": "Decrease {{label}}",
+      "increase": "Increase {{label}}",
+      "submit": "Search stays",
+      "searching": "Searching…"
+    },
+    "types": {
+      "any": "Any",
+      "hotel": "Hotel",
+      "apartment": "Apartment",
+      "hostel": "Hostel",
+      "guesthouse": "Guesthouse",
+      "resort": "Resort",
+      "villa": "Villa",
+      "aparthotel": "Aparthotel"
+    },
+    "amenities": {
+      "wifi": "Wi-Fi",
+      "breakfast": "Breakfast",
+      "parking": "Parking",
+      "pool": "Pool",
+      "air_conditioning": "Air conditioning",
+      "spa": "Spa",
+      "gym": "Gym",
+      "pets_allowed": "Pet friendly"
+    },
+    "filters": {
+      "title": "Filters",
+      "show": "Show filters",
+      "hide": "Hide filters",
+      "priceLabel": "Price per night",
+      "minPrice": "Minimum",
+      "maxPrice": "Maximum",
+      "currency": "Currency",
+      "currencies": {
+        "any": "Any",
+        "EUR": "EUR",
+        "USD": "USD",
+        "GBP": "GBP",
+        "THB": "THB"
+      },
+      "ratingLabel": "Rating",
+      "rating": {
+        "any": "Any",
+        "3": "3+",
+        "4": "4+",
+        "4_5": "4.5+"
+      },
+      "amenitiesLabel": "Amenities",
+      "extrasLabel": "Stay options",
+      "freeCancellation": "Free cancellation",
+      "breakfastIncluded": "Breakfast included",
+      "privateBathroom": "Private bathroom"
+    },
+    "results": {
+      "title": "Stay options",
+      "count_one": "{{count}} stay found",
+      "count_other": "{{count}} stays found",
+      "idle": "Choose a destination and dates, then search stays.",
+      "empty": "No demo stays match these filters.",
+      "error": "Search could not be completed. Try again.",
+      "demoNotice": "These are demo stays to illustrate the search — not real availability.",
+      "demoPrice": "Prices are examples only.",
+      "sortLabel": "Sort",
+      "sort": {
+        "recommended": "Recommended",
+        "price_asc": "Price: low to high",
+        "price_desc": "Price: high to low",
+        "rating": "Rating",
+        "distance": "Distance"
+      }
+    },
+    "card": {
+      "distance": "{{distance}} km from centre",
+      "reviews_one": "{{count}} review",
+      "reviews_other": "{{count}} reviews",
+      "freeCancellation": "Free cancellation",
+      "breakfastIncluded": "Breakfast included",
+      "sharedBathroom": "Shared bathroom",
+      "provider": "Via {{name}}",
+      "perNight": "Per night",
+      "total_one": "{{amount}} for {{count}} night",
+      "total_other": "{{amount}} for {{count}} nights",
+      "viewDeal": "View deal"
+    }
+  },
+  "inconvenience": {
+    "overnight_flight": "Overnight flight",
+    "early_departure": "Very early departure",
+    "late_arrival": "Very late arrival",
+    "long_layover": "Long layover",
+    "multiple_stops": "Several stops",
+    "airport_change": "Airport change",
+    "self_transfer": "Self-transfer",
+    "short_connection": "Short, risky connection",
+    "long_total_duration": "Very long travel time",
+    "inconvenient_arrival": "Inconvenient arrival time",
+    "overnight_layover": "Overnight layover",
+    "transit_visa": "Transit visa may be required",
+    "complex_route": "Complex route"
+  },
+  "planner": {
+    "pageTitle": "AI Vacation Planner",
+    "pageSubtitle": "Tell us who is travelling and what you enjoy. The planner will suggest destinations, stays, transport and a day-by-day plan.",
+    "destination": {
+      "title": "Origin, destination and dates",
+      "originLabel": "From",
+      "originPlaceholder": "Everywhere, continent, country — or type a city",
+      "originHint": "Where the trip starts — Everywhere, a continent, a country, or type any city.",
+      "destinationLabel": "Destination",
+      "destinationPlaceholder": "Everywhere, continent, country — or type a city",
+      "destinationHint": "Everywhere, a continent, a country, or type any city — or leave empty and the AI will suggest destinations.",
+      "monthLabel": "Preferred month",
+      "durationLabel": "Trip length (days)"
+    },
+    "group": {
+      "title": "Who is travelling?",
+      "adults": "Adults",
+      "children": "Children",
+      "seniors": "Seniors (65+)",
+      "pets": "Pets",
+      "childAge": "Age of child {{number}}"
+    },
+    "tripTypes": {
+      "title": "Trip type",
+      "hint": "Choose one or more",
+      "options": {
+        "romantic": "Romantic",
+        "family": "Family",
+        "adventure": "Adventure",
+        "beach": "Beach",
+        "cultural": "Cultural",
+        "gastronomic": "Gastronomic",
+        "nature": "Nature",
+        "nightlife": "Nightlife",
+        "wellness": "Wellness",
+        "budget": "Budget",
+        "luxury": "Luxury",
+        "mixed": "Mixed"
+      }
+    },
+    "preferences": {
+      "title": "Preferences",
+      "budgetLabel": "Total budget",
+      "currencyLabel": "Currency",
+      "budgetPlaceholder": "e.g. 2500",
+      "climateLabel": "Preferred climate",
+      "climate": {
+        "any": "Any",
+        "hot": "Hot",
+        "warm": "Warm",
+        "mild": "Mild",
+        "cool": "Cool",
+        "snow": "Snow"
+      },
+      "paceLabel": "Travel pace",
+      "pace": {
+        "relaxed": "Relaxed",
+        "moderate": "Moderate",
+        "intense": "Intense"
+      },
+      "comfortLabel": "Comfort level",
+      "comfort": {
+        "budget": "Budget",
+        "standard": "Standard",
+        "premium": "Premium",
+        "luxury": "Luxury"
+      },
+      "interestsLabel": "Activities and interests",
+      "interests": {
+        "museums": "Museums",
+        "history": "History",
+        "architecture": "Architecture",
+        "hiking": "Hiking",
+        "beaches": "Beaches",
+        "water_sports": "Water sports",
+        "shopping": "Shopping",
+        "nightlife": "Nightlife",
+        "spa": "Spa",
+        "theme_parks": "Theme parks",
+        "photography": "Photography",
+        "local_food": "Local food"
+      },
+      "foodLabel": "Food",
+      "food": {
+        "local_cuisine": "Local cuisine",
+        "street_food": "Street food",
+        "fine_dining": "Fine dining",
+        "vegetarian": "Vegetarian",
+        "vegan": "Vegan",
+        "halal": "Halal",
+        "kosher": "Kosher",
+        "gluten_free": "Gluten-free"
+      }
+    },
+    "stays": {
+      "title": "Hotels and accommodation",
+      "hint": "Tell us how you like to stay. The planner will suggest matching demo stays for your destination.",
+      "typeLabel": "Stay type",
+      "roomsLabel": "Rooms",
+      "extrasLabel": "Stay preferences",
+      "breakfastIncluded": "Breakfast included",
+      "freeCancellation": "Free cancellation",
+      "petsHint": "Travelling with pets — pet-friendly stays will be preferred."
+    },
+    "submit": "Create my trip",
+    "generating": "Creating your trip…",
+    "result": {
+      "title": "Your trip preview",
+      "demoNotice": "This is a demo itinerary. Real AI planning will be connected in a later stage.",
+      "tripTo": "Trip to {{destination}}",
+      "destinationFallback": "a destination picked for you",
+      "day": "Day {{number}}",
+      "gettingAround": "Getting around: {{mode}}",
+      "dayTransportCost": "Local transport this day: ≈ {{amount}}",
+      "previewLimit": "Showing the first {{shown}} of {{total}} days.",
+      "staysTitle": "Suggested stays",
+      "staysEmpty": "No matching stays in the demo catalogue for this destination. Try a city such as Barcelona, Paris or Helsinki.",
+      "compareMore": "Compare more stays"
+    },
+    "plan": {
+      "title": "Your trip",
+      "demoNotice": "This is a demo plan with estimated prices — not real bookings or live quotes.",
+      "creating": "Creating your trip…",
+      "error": "We could not create your trip. You can try again.",
+      "retry": "Try again",
+      "regenerate": "Regenerate trip",
+      "edit": "Edit preferences",
+      "summary": "A {{days}}-day plan for {{count}} travellers in {{destination}}.",
+      "stayFallback": "Central stay in {{place}}",
+      "dayTitles": {
+        "arrival": "Arrival",
+        "departure": "Departure",
+        "explore": "Explore the city",
+        "city": "City day",
+        "nature": "Nature day",
+        "beach": "Beach day",
+        "culture": "Culture day",
+        "food": "Food day"
+      },
+      "slots": {
+        "morning": "Morning",
+        "afternoon": "Afternoon",
+        "evening": "Evening"
+      },
+      "sections": {
+        "meals": "Meals",
+        "transport": "Transportation",
+        "accommodation": "Accommodation",
+        "dailyCost": "Estimated daily cost"
+      },
+      "activities": {
+        "arrival": "Arrival",
+        "checkIn": "Hotel check-in",
+        "departure": "Departure",
+        "cityWalk": "City walk",
+        "museum": "Museum visit",
+        "market": "Local market",
+        "viewpoint": "Viewpoint",
+        "beach": "Beach time",
+        "nature": "Nature outing",
+        "spa": "Spa or wellness",
+        "shopping": "Shopping",
+        "photoWalk": "Photo walk",
+        "nightlife": "Evening out",
+        "localFood": "Local food tasting",
+        "evening": "Evening activity"
+      },
+      "activityDetails": {
+        "arrival": "Arrive and settle in.",
+        "checkIn": "Check in and drop your bags.",
+        "departure": "Travel day home.",
+        "cityWalk": "A walk through the centre.",
+        "museum": "A museum or cultural indoor visit.",
+        "market": "Browse a local market.",
+        "viewpoint": "A view over the city or coast.",
+        "beach": "Time by the water.",
+        "nature": "A trip into nature nearby.",
+        "spa": "A restful spa or wellness stop.",
+        "shopping": "Time for local shops.",
+        "photoWalk": "A slower walk for photos.",
+        "nightlife": "An evening neighbourhood or venue.",
+        "localFood": "A tasting of local dishes.",
+        "evening": "A relaxed evening activity."
+      },
+      "meals": {
+        "breakfast": "Breakfast",
+        "lunch": "Local restaurant",
+        "dinner": "Dinner",
+        "streetFood": "Street food",
+        "fineDining": "Fine dining"
+      },
+      "cost": {
+        "title": "Total Trip Cost",
+        "demoNote": "Amounts are mock estimates for planning only.",
+        "transport": "Transport",
+        "accommodation": "Accommodation",
+        "baggage": "Baggage",
+        "food": "Food",
+        "localTransport": "Local transport",
+        "activities": "Activities",
+        "insurance": "Insurance",
+        "visa": "Visa",
+        "other": "Other",
+        "total": "Estimated total"
+      },
+      "budget": {
+        "title": "Budget comparison",
+        "yourBudget": "Your budget",
+        "estimated": "Estimated trip cost",
+        "remaining": "Remaining",
+        "over": "Estimated cost is above your selected budget by {{amount}}."
+      }
+    },
+    "options": {
+      "title": "Trip options",
+      "demoNotice": "These are demo trip options with estimated totals — not real bookings.",
+      "finding": "Finding other trip options…",
+      "generateOther": "Generate other trips",
+      "viewTrip": "View trip",
+      "selectToCompare": "Select to compare",
+      "selectedCount_one": "{{count}} trip selected",
+      "selectedCount_other": "{{count}} trips selected",
+      "selectHint": "Select at least two trips to compare.",
+      "compare": "Compare selected",
+      "compareTitle": "Compare trips",
+      "dates": "Dates",
+      "duration": "Duration",
+      "highlightsLabel": "Highlights",
+      "estimatedTotal": "Estimated total",
+      "flightFrom": "Flight from {{origin}}",
+      "stars": "{{count}}★ hotel",
+      "backToOptions": "Back to options",
+      "backToTrip": "Back to trip",
+      "changeStay": "Change accommodation",
+      "stayPickerNotice": "Demo stays for this destination, dates and group.",
+      "loadingStays": "Loading other stays…",
+      "currentStay": "Currently selected",
+      "chooseStay": "Choose this stay",
+      "showByDay": "Show plan by day",
+      "outbound": "Outbound",
+      "return": "Return",
+      "departureTime": "Departure",
+      "arrivalTime": "Arrival",
+      "direct": "Direct",
+      "modes": {
+        "flight": "Flight",
+        "train": "Train",
+        "bus": "Bus",
+        "ferry": "Ferry",
+        "public_transport": "Public transport",
+        "taxi": "Taxi",
+        "rental_car": "Rental car",
+        "walk": "Walk"
+      },
+      "highlights": {
+        "beach": "Beach",
+        "culture": "Culture",
+        "food": "Food",
+        "history": "History",
+        "ocean": "Ocean",
+        "city": "City",
+        "relaxation": "Relaxation",
+        "nature": "Nature"
+      },
+      "tags": {
+        "beach": "Beach",
+        "culture": "Culture",
+        "food": "Food",
+        "history": "History",
+        "ocean": "Ocean",
+        "city": "City",
+        "relaxation": "Relaxation",
+        "nature": "Nature"
+      }
+    },
+    "stops": {
+      "hotel": "Hotel",
+      "city_center": "City centre",
+      "old_town": "Old town",
+      "museum": "Museum",
+      "market": "Local market",
+      "viewpoint": "Viewpoint",
+      "park": "Park",
+      "beach": "Beach",
+      "nature_spot": "Nature spot outside the city",
+      "restaurant": "Restaurant"
+    }
+  },
+  "transportation": {
+    "question": "How do you want to move around?",
+    "hint": "Your choice shapes the daily routes and the cost estimate.",
+    "willShow": "What you'll see for this option:",
+    "modes": {
+      "public_transport": {
+        "title": "Public transport",
+        "description": "Metro, bus, tram, train and local travel passes.",
+        "details": {
+          "passes": "Suitable travel passes and their prices",
+          "official": "Official transport services",
+          "payment": "Payment options",
+          "validity": "Validity period and zones",
+          "link": "Link to the official service or partner"
+        }
+      },
+      "taxi": {
+        "title": "Taxi / ride-hailing",
+        "description": "Services that actually work in your destination, e.g. Uber, Bolt or local taxis.",
+        "details": {
+          "availability": "Which services are available in the city",
+          "price": "Approximate prices",
+          "rating": "Ratings and features",
+          "link": "Link to the service"
+        }
+      },
+      "rental_car": {
+        "title": "Rental car",
+        "description": "Freedom to explore places further from the centre.",
+        "details": {
+          "companies": "Rental companies, prices and conditions",
+          "deposit": "Deposit and insurance",
+          "carType": "Car type",
+          "oneWay": "Pick-up and drop-off in different places",
+          "runningCosts": "Fuel, parking and toll roads in the total cost"
+        }
+      }
+    },
+    "vehicle": {
+      "metro": "Metro",
+      "bus": "Bus",
+      "tram": "Tram",
+      "train": "Train",
+      "ferry": "Ferry",
+      "taxi": "Taxi",
+      "car": "Car",
+      "walk": "Walk"
+    }
+  },
+  "trip": {
+    "title": "My Trip",
+    "open": "Open trip summary",
+    "close": "Close trip summary",
+    "closeAction": "Close",
+    "empty": "No trip yet. Add transport or a stay from the search results.",
+    "destination": "Destination",
+    "destinationUnset": "Not set yet",
+    "dates": "Dates",
+    "datesUnset": "Dates not set yet",
+    "datesRange": "{{from}} – {{to}}",
+    "travelers": "Travellers",
+    "transport": "Transport",
+    "transportEmpty": "No transport selected",
+    "accommodation": "Accommodation",
+    "accommodationEmpty": "No accommodation selected",
+    "itemPrice": "Item price",
+    "estimatedTotal": "Estimated total",
+    "add": "Add to trip",
+    "added": "Added to trip",
+    "removed": "Removed from trip",
+    "cleared": "Trip cleared",
+    "inTrip": "In your trip",
+    "removeTransport": "Remove transport",
+    "removeAccommodation": "Remove stay",
+    "clear": "Clear trip",
+    "warningDestination": "This item’s destination differs from the current trip. Both are kept.",
+    "warningDates": "This item’s dates differ from the current trip. Both are kept.",
+    "items_one": "{{count}} item",
+    "items_other": "{{count}} items"
+  },
+  "filters": {
+    "show": "Filters",
+    "hide": "Hide filters",
+    "clearAll": "Clear all",
+    "remove": "Remove {{label}}"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has moved.",
+    "backHome": "Back to home"
+  },
+  "footer": {
+    "description": "An AI trip planner that compares flights, stays, tours and local transport so you can plan the whole trip in one place.",
+    "productTitle": "Product",
+    "affiliateDisclosure": "We don't sell tickets or accommodation. We compare options and send you to trusted partners to book. We may earn a commission at no extra cost to you.",
+    "rights": "© {{year}} AI Travel Planner"
+  }
+}

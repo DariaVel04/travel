@@ -1,0 +1,845 @@
+{
+  "app": {
+    "name": "AI Travel Planner",
+    "homeTitle": "Suunnittele koko matkasi tekoälyn avulla"
+  },
+  "nav": {
+    "mainNavigation": "Päävalikko",
+    "home": "Etusivu",
+    "flights": "Lennot",
+    "hotels": "Majoitus",
+    "planner": "Lomasuunnittelija",
+    "login": "Kirjaudu",
+    "loginComingSoon": "Käyttäjätilit tulossa pian",
+    "register": "Luo tili",
+    "account": "Tili",
+    "logout": "Kirjaudu ulos",
+    "openMenu": "Avaa valikko",
+    "closeMenu": "Sulje valikko"
+  },
+  "auth": {
+    "login": {
+      "title": "Kirjaudu",
+      "subtitle": "Kirjaudu hallitaksesi tiliäsi ja tallennettuja matkoja.",
+      "submit": "Kirjaudu",
+      "submitting": "Kirjaudutaan…",
+      "noAccount": "Eikö sinulla ole tiliä?",
+      "registerLink": "Luo tili"
+    },
+    "register": {
+      "title": "Luo tili",
+      "subtitle": "Rekisteröidy, jotta matkasuunnitelmasi pysyvät tallessa.",
+      "submit": "Luo tili",
+      "submitting": "Luodaan tiliä…",
+      "hasAccount": "Onko sinulla jo tili?",
+      "loginLink": "Kirjaudu"
+    },
+    "account": {
+      "title": "Tili",
+      "subtitle": "Profiilisi ja tilin asetukset.",
+      "overview": "Tili",
+      "status": "Tila",
+      "plan": "Tilaus",
+      "memberSince": "Jäsen alkaen",
+      "editProfile": "Muokkaa profiilia",
+      "saveProfile": "Tallenna muutokset",
+      "saving": "Tallennetaan…",
+      "profileSaved": "Profiili päivitetty.",
+      "changePassword": "Vaihda salasana",
+      "savePassword": "Päivitä salasana",
+      "passwordSaved": "Salasana päivitetty."
+    },
+    "fields": {
+      "name": "Nimi",
+      "email": "Sähköposti",
+      "password": "Salasana",
+      "confirmPassword": "Vahvista salasana",
+      "currentPassword": "Nykyinen salasana",
+      "newPassword": "Uusi salasana",
+      "passwordHint": "Vähintään {{min}} merkkiä"
+    },
+    "status": {
+      "ACTIVE": "Aktiivinen",
+      "SUSPENDED": "Keskeytetty",
+      "DELETED": "Poistettu"
+    },
+    "plan": {
+      "FREE": "Ilmainen",
+      "PREMIUM": "Premium"
+    },
+    "validation": {
+      "nameRequired": "Anna nimesi.",
+      "nameTooLong": "Nimi on liian pitkä.",
+      "emailRequired": "Anna sähköpostiosoitteesi.",
+      "emailInvalid": "Anna kelvollinen sähköpostiosoite.",
+      "passwordRequired": "Anna salasanasi.",
+      "passwordMin": "Salasanassa on oltava vähintään 8 merkkiä.",
+      "passwordMax": "Salasana on liian pitkä.",
+      "confirmRequired": "Vahvista salasana.",
+      "passwordMismatch": "Salasanat eivät täsmää.",
+      "currentPasswordRequired": "Anna nykyinen salasanasi."
+    },
+    "errors": {
+      "invalidCredentials": "Virheellinen sähköposti tai salasana.",
+      "emailTaken": "Tällä sähköpostilla on jo tili.",
+      "invalidInput": "Tarkista lomake ja yritä uudelleen.",
+      "unavailable": "Tilipalvelu ei ole juuri nyt käytettävissä.",
+      "currentPassword": "Nykyinen salasana on väärä.",
+      "generic": "Jokin meni pieleen. Yritä uudelleen."
+    }
+  },
+  "language": {
+    "label": "Kieli"
+  },
+  "locationSelector": {
+    "anywhere": "Kaikkialla",
+    "anywhereDescription": "Kaikki kohteet",
+    "typedCityDescription": "Käytä tätä kaupungin nimeä",
+    "addMore": "Lisää toinen…",
+    "maxReached": "Sijaintien enimmäismäärä valittu",
+    "remove": "Poista {{name}}",
+    "searching": "Haetaan…",
+    "noResults": "Sijainteja ei löytynyt haulla ”{{query}}”",
+    "types": {
+      "airport": "Lentokenttä",
+      "city": "Kaupunki",
+      "country": "Maa",
+      "continent": "Maanosa",
+      "region": "Alue"
+    }
+  },
+  "common": {
+    "comingSoon": "Tulossa pian",
+    "duration": "{{hours}} h {{minutes}} min",
+    "minutes": "{{count}} min",
+    "days_one": "{{count}} päivä",
+    "days_other": "{{count}} päivää",
+    "months_one": "{{count}} kuukausi",
+    "months_other": "{{count}} kuukautta",
+    "travellers_one": "{{count}} matkustaja",
+    "travellers_other": "{{count}} matkustajaa",
+    "severity": {
+      "low": "vähäinen",
+      "medium": "kohtalainen",
+      "high": "merkittävä"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "Varhainen esiversio",
+      "title": "Suunnittele koko matkasi tekoälyn avulla",
+      "subtitle": "Vertailemme lentoja, majoituksia, pakettimatkoja ja liikkumistapoja — ja näytämme, mikä vaihtoehto on oikeasti paras koko matkallesi, ei vain halvin lippu."
+    },
+    "search": {
+      "tabsLabel": "Mitä haluat tehdä?",
+      "flightsTab": "Lennot",
+      "plannerTab": "Lomasuunnittelija",
+      "fromLabel": "Mistä",
+      "fromPlaceholder": "Kaikkialla, maanosa, maa — tai kirjoita kaupunki",
+      "toLabel": "Minne",
+      "toPlaceholder": "Kaikkialla, maanosa, maa — tai kirjoita kaupunki",
+      "destinationLabel": "Minne haluaisit matkustaa?",
+      "destinationPlaceholder": "Kaikkialla, maanosa, maa — tai kirjoita kaupunki",
+      "tripTypeLabel": "Matkan tyyppi",
+      "searchFlights": "Hae lentoja",
+      "startPlanning": "Aloita suunnittelu"
+    },
+    "features": {
+      "title": "Yksi palvelu koko matkalle",
+      "subtitle": "Emme myy lippuja. Vertailemme monien kumppanien vaihtoehtoja ja autamme valitsemaan sinulle parhaiten sopivan.",
+      "smartFlights": {
+        "title": "Älykäs lentohaku",
+        "description": "Hae usealta lentokentältä kerralla joustavilla päivämäärillä ja matkan pituuksilla — lentoyhtiöistä, matkatoimistoista ja tilauslennoista."
+      },
+      "vacationPlanner": {
+        "title": "Tekoälyn lomasuunnittelija",
+        "description": "Kerro ryhmästäsi, budjetistasi ja kiinnostuksen kohteistasi ja saat kohteet, majoitukset ja päiväkohtaisen suunnitelman."
+      },
+      "totalCost": {
+        "title": "Matkan kokonaishinta",
+        "description": "Näe, mitä koko matka todella maksaa: lennot, majoitus, ruoka, paikallinen liikenne ja muut kulut.",
+        "example": "Lennot {{flights}} · Majoitus {{stay}} · Liikenne {{transport}}"
+      },
+      "climate": {
+        "title": "Ilmastotieto",
+        "description": "Lämpötila, sade, kosteus ja kausiriskit, kuten monsuunit, meduusat tai siitepöly — ennen kuin valitset päivät."
+      },
+      "pricePrediction": {
+        "title": "Hintaennuste",
+        "description": "Tiedä, onko hinta hyvä, vertaamalla sitä aiempiin hintoihin ja trendeihin.",
+        "example": "Nyt {{current}} · yleensä {{average}}"
+      },
+      "tourDeals": {
+        "title": "Matkanjärjestäjien ja tilauslentojen tarjoukset",
+        "description": "Vertaa erikseen varattuja lentoja ja hotellia matkanjärjestäjien pakettimatkoihin ja tilauslentoihin.",
+        "example": "Paketilla säästät {{amount}}"
+      }
+    }
+  },
+  "flights": {
+    "pageTitle": "Matka- ja liikennehaku",
+    "pageSubtitle": "Hae koko matkaa lennoilla, junilla, busseilla, lautoilla, autolla tai yhdistetyllä liikenteellä. Meno ja paluu voivat käyttää eri kaupunkeja.",
+    "form": {
+      "tripKindLabel": "Matkatyyppi",
+      "tripKind": {
+        "round_trip": "Meno-paluu",
+        "one_way": "Yksisuuntainen",
+        "multi_city": "Usean kaupungin matka",
+        "open_jaw": "Avoin paluu"
+      },
+      "transportLabel": "Liikenne",
+      "transportHint": "Yhdistetty liikenne yhdistää useita matkustustapoja samaan matkaan.",
+      "transport": {
+        "flight": "Lento",
+        "train": "Juna",
+        "bus": "Bussi",
+        "car": "Auto",
+        "ferry": "Lautta",
+        "any": "Mikä tahansa",
+        "mixed": "Yhdistetty liikenne"
+      },
+      "mixedModesLabel": "Yhdistä",
+      "mixedModesHint": "Valitse vähintään kaksi tyyppiä. Reittioptimointia ei vielä käytetä.",
+      "legOutbound": "Meno",
+      "legReturn": "Paluu",
+      "legNumber": "Matka {{number}}",
+      "addLeg": "Lisää kaupunki",
+      "removeLeg": "Poista",
+      "openJawHint": "Paluu voi alkaa eri kaupungista kuin menon saapuminen.",
+      "differentCitiesHint": "Menon ja paluun ei tarvitse käyttää samoja kaupunkeja.",
+      "multiCityHint": "Jokainen väli voi käyttää eri paikkoja. Liikenneyhdistelmät näkyvät tuloksissa.",
+      "originsLabel": "Mistä",
+      "originsHint": "Lisää yksi tai useampi paikka",
+      "destinationsLabel": "Minne",
+      "destinationsHint": "Lisää yksi tai useampi paikka — tai valitse Mikä tahansa paikka",
+      "dateModeLabel": "Matkapäivät",
+      "dateMode": {
+        "exact": "Tarkat päivät",
+        "range": "Aikaväli",
+        "flexible": "Joustava",
+        "months": "Kokonaiset kuukaudet",
+        "cheapest": "Edullisin ajankohta"
+      },
+      "departureDate": "Lähdön päivä",
+      "returnDate": "Paluun päivä",
+      "rangeFrom": "Aikaisin lähtö",
+      "rangeTo": "Myöhäisin paluu",
+      "flexDate": "Noin",
+      "flexDays": "Joustavuus",
+      "flexDaysOption": "± {{count}} päivää",
+      "monthsLabel": "Valitse yksi tai useampi kuukausi",
+      "cheapestWithin": "Hae seuraavan ajan sisältä",
+      "durationLabel": "Matkan kesto",
+      "customDuration": "Oma",
+      "minDays": "Väh. päivät",
+      "maxDays": "Enint. päivät",
+      "passengersLabel": "Matkustajat",
+      "adults": "Aikuiset",
+      "children": "Lapset (2–11)",
+      "infants": "Vauvat (alle 2)",
+      "passengersTotal": "Yhteensä",
+      "decrease": "Vähennä: {{label}}",
+      "increase": "Lisää: {{label}}",
+      "cabinClassLabel": "Matkustusluokka",
+      "cabinClass": {
+        "economy": "Economy",
+        "premium_economy": "Premium Economy",
+        "business": "Business",
+        "first": "First Class"
+      },
+      "stopsLabel": "Vaihdot",
+      "stops": {
+        "any": "Kaikki",
+        "nonstop": "Suora",
+        "one": "1 vaihto",
+        "two_plus": "2+ vaihtoa"
+      },
+      "baggageLabel": "Matkatavarat",
+      "baggage": {
+        "none": "Ei ruumalaukkua",
+        "one": "1 ruumalaukku",
+        "two": "2 ruumalaukkua"
+      },
+      "departureTimeLabel": "Lähtöaika",
+      "departureTime": {
+        "any": "Kaikki",
+        "morning": "Aamu",
+        "afternoon": "Iltapäivä",
+        "evening": "Ilta",
+        "night": "Yö"
+      },
+      "overnightLabel": "Yömatkustus",
+      "overnight": {
+        "any": "Kaikki",
+        "avoid": "Vältä yömatkustusta",
+        "allowed": "Yömatkustus sallittu"
+      },
+      "preferenceLabel": "Matkan prioriteetti",
+      "preferenceHint": "Tallennetaan myöhempää hakua ja tekoälyjärjestystä varten. Esimerkkituloksia ei vielä järjestetä näin.",
+      "preference": {
+        "cheapest": "Halvin",
+        "fastest": "Nopein",
+        "fewer_transfers": "Vähemmän vaihtoja",
+        "comfortable": "Mukavampi matka"
+      },
+      "sourcesLabel": "Mistä haetaan",
+      "sourcesHint": "Matkanjärjestäjät myyvät joskus edullisempia tilauslentojen paikkoja, joita tavallinen lentohaku ei näytä.",
+      "sources": {
+        "airline": "Lentoyhtiöt",
+        "ota": "Verkkomatkatoimistot",
+        "tour_operator": "Matkanjärjestäjät",
+        "charter": "Tilauslennot",
+        "package": "Pakettimatkat"
+      },
+      "submit": "Hae matkoja",
+      "searching": "Haetaan…"
+    },
+    "results": {
+      "title": "Matkavaihtoehdot",
+      "count_one": "{{count}} vaihtoehto löytyi",
+      "count_other": "{{count}} vaihtoehtoa löytyi",
+      "idle": "Syötä matkan tiedot ja aloita haku.",
+      "empty": "Näillä suodattimilla ei ole esimerkkituloksia.",
+      "demoNotice": "Nämä ovat esimerkkituloksia matkoista — eivät oikeaa saatavuutta. Kumppanihakua ei ole vielä yhdistetty.",
+      "demoBadge": "Demo",
+      "mixed": "Yhdistetty liikenne",
+      "outbound": "Meno",
+      "inbound": "Paluu",
+      "leg": "Matka",
+      "transfers_one": "{{count}} vaihto",
+      "transfers_other": "{{count}} vaihtoa",
+      "notCheapestOnly": "Halvin ei ole aina paras. Jokaisesta vaihtoehdosta näytetään hinnan vieressä kokonaismatka-aika ja haittatekijät.",
+      "direct": "Suora",
+      "stops_one": "{{count}} välilasku",
+      "stops_other": "{{count}} välilaskua",
+      "via": "kautta {{airports}}",
+      "nextDay": "+{{count}}",
+      "totalPrice": "Kokonaishinta",
+      "priceBreakdown": "Hinnan erittely",
+      "breakdown": {
+        "base": "Lippu",
+        "baggage": "Matkatavarat",
+        "fees": "Maksut",
+        "transfer": "Siirto"
+      },
+      "convenienceScore": "Mukavuuspisteet",
+      "noInconveniences": "Ei merkittäviä haittoja",
+      "inconveniencesLabel": "Hyvä tietää",
+      "viewDeal": "Katso: {{partner}}",
+      "partnerDisclosure": "Avaa kumppanin sivuston"
+    },
+    "sourceType": {
+      "airline": "Lentoyhtiö",
+      "ota": "Matkatoimisto",
+      "tour_operator": "Matkanjärjestäjä",
+      "charter": "Tilauslento",
+      "package": "Paketti"
+    },
+    "tags": {
+      "special_offer": "Erikoistarjous",
+      "last_minute": "Äkkilähtö"
+    }
+  },
+  "hotels": {
+    "pageTitle": "Hotellit ja majoitus",
+    "pageSubtitle": "Vertaa hotelleja, asuntoja ja muita majoituksia. Nämä ovat esimerkkituloksia — eivät oikeaa saatavuutta.",
+    "form": {
+      "destinationLabel": "Minne",
+      "destinationHint": "Kaikkialla, maanosa, maa — tai kirjoita mikä tahansa kaupunki",
+      "destinationPlaceholder": "Kaikkialla, maanosa, maa — tai kirjoita kaupunki",
+      "checkIn": "Saapuminen",
+      "checkOut": "Lähtö",
+      "nights_one": "{{count}} yö",
+      "nights_other": "{{count}} yötä",
+      "guestsLabel": "Vieraat ja huoneet",
+      "adults": "Aikuiset",
+      "children": "Lapset",
+      "rooms": "Huoneet",
+      "childAge": "Lapsen {{number}} ikä",
+      "typeLabel": "Majoitustyyppi",
+      "decrease": "Vähennä: {{label}}",
+      "increase": "Lisää: {{label}}",
+      "submit": "Hae majoituksia",
+      "searching": "Haetaan…"
+    },
+    "types": {
+      "any": "Kaikki",
+      "hotel": "Hotelli",
+      "apartment": "Huoneisto",
+      "hostel": "Hostelli",
+      "guesthouse": "Vierastalo",
+      "resort": "Resortti",
+      "villa": "Huvila",
+      "aparthotel": "Aparthotel"
+    },
+    "amenities": {
+      "wifi": "Wi-Fi",
+      "breakfast": "Aamiainen",
+      "parking": "Pysäköinti",
+      "pool": "Allas",
+      "air_conditioning": "Ilmastointi",
+      "spa": "Spa",
+      "gym": "Kuntosali",
+      "pets_allowed": "Lemmikit sallittu"
+    },
+    "filters": {
+      "title": "Suodattimet",
+      "show": "Näytä suodattimet",
+      "hide": "Piilota suodattimet",
+      "priceLabel": "Hinta / yö",
+      "minPrice": "Vähintään",
+      "maxPrice": "Enintään",
+      "currency": "Valuutta",
+      "currencies": {
+        "any": "Kaikki",
+        "EUR": "EUR",
+        "USD": "USD",
+        "GBP": "GBP",
+        "THB": "THB"
+      },
+      "ratingLabel": "Arvosana",
+      "rating": {
+        "any": "Kaikki",
+        "3": "3+",
+        "4": "4+",
+        "4_5": "4.5+"
+      },
+      "amenitiesLabel": "Mukavuudet",
+      "extrasLabel": "Majoituksen ehdot",
+      "freeCancellation": "Ilmainen peruutus",
+      "breakfastIncluded": "Aamiainen sisältyy",
+      "privateBathroom": "Oma kylpyhuone"
+    },
+    "results": {
+      "title": "Majoitusvaihtoehdot",
+      "count_one": "{{count}} majoitus löytyi",
+      "count_other": "{{count}} majoitusta löytyi",
+      "idle": "Valitse kohde ja päivämäärät ja hae majoituksia.",
+      "empty": "Näillä suodattimilla ei ole esimerkkituloksia.",
+      "error": "Hakua ei voitu suorittaa. Yritä uudelleen.",
+      "demoNotice": "Nämä ovat esimerkkituloksia haun havainnollistamiseksi — eivät oikeaa saatavuutta.",
+      "demoPrice": "Hinnat ovat vain esimerkkejä.",
+      "sortLabel": "Järjestä",
+      "sort": {
+        "recommended": "Suositellut",
+        "price_asc": "Hinta: halvin ensin",
+        "price_desc": "Hinta: kallein ensin",
+        "rating": "Arvosana",
+        "distance": "Etäisyys"
+      }
+    },
+    "card": {
+      "distance": "{{distance}} km keskustasta",
+      "reviews_one": "{{count}} arvostelu",
+      "reviews_other": "{{count}} arvostelua",
+      "freeCancellation": "Ilmainen peruutus",
+      "breakfastIncluded": "Aamiainen sisältyy",
+      "sharedBathroom": "Yhteinen kylpyhuone",
+      "provider": "Kautta {{name}}",
+      "perNight": "Yöltä",
+      "total_one": "{{amount}} / {{count}} yö",
+      "total_other": "{{amount}} / {{count}} yötä",
+      "viewDeal": "Katso tarjous"
+    }
+  },
+  "inconvenience": {
+    "overnight_flight": "Yölento",
+    "early_departure": "Hyvin aikainen lähtö",
+    "late_arrival": "Hyvin myöhäinen saapuminen",
+    "long_layover": "Pitkä vaihto",
+    "multiple_stops": "Useita välilaskuja",
+    "airport_change": "Lentokentän vaihto",
+    "self_transfer": "Omatoiminen vaihto",
+    "short_connection": "Lyhyt, riskialtis vaihto",
+    "long_total_duration": "Hyvin pitkä matka-aika",
+    "inconvenient_arrival": "Hankala saapumisaika",
+    "overnight_layover": "Yön yli kestävä vaihto",
+    "transit_visa": "Kauttakulkuviisumi voi olla tarpeen",
+    "complex_route": "Monimutkainen reitti"
+  },
+  "planner": {
+    "pageTitle": "Tekoälyn lomasuunnittelija",
+    "pageSubtitle": "Kerro, kuka matkustaa ja mistä pidätte. Suunnittelija ehdottaa kohteita, majoituksia, liikkumista ja päiväkohtaisen suunnitelman.",
+    "destination": {
+      "title": "Lähtöpaikka, kohde ja ajankohta",
+      "originLabel": "Mistä",
+      "originPlaceholder": "Kaikkialla, maanosa, maa — tai kirjoita kaupunki",
+      "originHint": "Mistä matka alkaa — kaikkialla, maanosa, maa tai kirjoita mikä tahansa kaupunki.",
+      "destinationLabel": "Kohde",
+      "destinationPlaceholder": "Kaikkialla, maanosa, maa — tai kirjoita kaupunki",
+      "destinationHint": "Kaikkialla, maanosa, maa tai kirjoita mikä tahansa kaupunki — tai jätä tyhjäksi, niin tekoäly ehdottaa kohteita.",
+      "monthLabel": "Toivottu kuukausi",
+      "durationLabel": "Matkan pituus (päivää)"
+    },
+    "group": {
+      "title": "Kuka matkustaa?",
+      "adults": "Aikuiset",
+      "children": "Lapset",
+      "seniors": "Seniorit (65+)",
+      "pets": "Lemmikit",
+      "childAge": "Lapsen {{number}} ikä"
+    },
+    "tripTypes": {
+      "title": "Matkan tyyppi",
+      "hint": "Valitse yksi tai useampi",
+      "options": {
+        "romantic": "Romanttinen",
+        "family": "Perhe",
+        "adventure": "Seikkailu",
+        "beach": "Ranta",
+        "cultural": "Kulttuuri",
+        "gastronomic": "Gastronomia",
+        "nature": "Luonto",
+        "nightlife": "Yöelämä",
+        "wellness": "Hyvinvointi",
+        "budget": "Edullinen",
+        "luxury": "Luksus",
+        "mixed": "Sekalainen"
+      }
+    },
+    "preferences": {
+      "title": "Toiveet",
+      "budgetLabel": "Kokonaisbudjetti",
+      "currencyLabel": "Valuutta",
+      "budgetPlaceholder": "esim. 2500",
+      "climateLabel": "Toivottu ilmasto",
+      "climate": {
+        "any": "Mikä tahansa",
+        "hot": "Kuuma",
+        "warm": "Lämmin",
+        "mild": "Leuto",
+        "cool": "Viileä",
+        "snow": "Luminen"
+      },
+      "paceLabel": "Matkan tahti",
+      "pace": {
+        "relaxed": "Rauhallinen",
+        "moderate": "Kohtuullinen",
+        "intense": "Tiivis"
+      },
+      "comfortLabel": "Mukavuustaso",
+      "comfort": {
+        "budget": "Edullinen",
+        "standard": "Tavallinen",
+        "premium": "Premium",
+        "luxury": "Luksus"
+      },
+      "interestsLabel": "Aktiviteetit ja kiinnostuksen kohteet",
+      "interests": {
+        "museums": "Museot",
+        "history": "Historia",
+        "architecture": "Arkkitehtuuri",
+        "hiking": "Vaellus",
+        "beaches": "Rannat",
+        "water_sports": "Vesiurheilu",
+        "shopping": "Ostokset",
+        "nightlife": "Yöelämä",
+        "spa": "Kylpylä",
+        "theme_parks": "Teemapuistot",
+        "photography": "Valokuvaus",
+        "local_food": "Paikallinen ruoka"
+      },
+      "foodLabel": "Ruoka",
+      "food": {
+        "local_cuisine": "Paikallinen keittiö",
+        "street_food": "Katuruoka",
+        "fine_dining": "Fine dining",
+        "vegetarian": "Kasvisruoka",
+        "vegan": "Vegaaninen",
+        "halal": "Halal",
+        "kosher": "Kosher",
+        "gluten_free": "Gluteeniton"
+      }
+    },
+    "stays": {
+      "title": "Hotellit ja majoitus",
+      "hint": "Kerro, millaisessa majoituksessa haluatte yöpyä. Suunnittelija ehdottaa sopivia esimerkkimajoituksia kohteeseen.",
+      "typeLabel": "Majoitustyyppi",
+      "roomsLabel": "Huoneet",
+      "extrasLabel": "Majoitustoiveet",
+      "breakfastIncluded": "Aamiainen sisältyy",
+      "freeCancellation": "Ilmainen peruutus",
+      "petsHint": "Matkustatte lemmikin kanssa — lemmikkiystävällisiä majoituksia suositaan."
+    },
+    "submit": "Luo matkani",
+    "generating": "Luodaan matkaasi…",
+    "result": {
+      "title": "Matkasi esikatselu",
+      "demoNotice": "Tämä on esimerkkisuunnitelma. Oikea tekoälysuunnittelu yhdistetään myöhemmässä vaiheessa.",
+      "tripTo": "Matka: {{destination}}",
+      "destinationFallback": "sinulle valittu kohde",
+      "day": "Päivä {{number}}",
+      "gettingAround": "Liikkuminen: {{mode}}",
+      "dayTransportCost": "Paikallinen liikenne tänä päivänä: ≈ {{amount}}",
+      "previewLimit": "Näytetään ensimmäiset {{shown}} / {{total}} päivää.",
+      "staysTitle": "Ehdotetut majoitukset",
+      "staysEmpty": "Tälle kohteelle ei löytynyt esimerkkimajoituksia. Kokeile kaupunkia, kuten Barcelona, Pariisi tai Helsinki.",
+      "compareMore": "Vertaa lisää majoituksia"
+    },
+    "plan": {
+      "title": "Matkasi",
+      "demoNotice": "Tämä on esimerkkisuunnitelma arviohintoineen — ei oikeita varauksia eikä live-hintoja.",
+      "creating": "Luodaan matkaasi…",
+      "error": "Matkaa ei voitu luoda. Voit yrittää uudelleen.",
+      "retry": "Yritä uudelleen",
+      "regenerate": "Luo matka uudelleen",
+      "edit": "Muokkaa toiveita",
+      "summary": "{{days}} päivän suunnitelma {{count}} matkustajalle kohteessa {{destination}}.",
+      "stayFallback": "Keskusta-majoitus: {{place}}",
+      "dayTitles": {
+        "arrival": "Saapuminen",
+        "departure": "Lähtö",
+        "explore": "Kaupungin tutkiminen",
+        "city": "Kaupunkipäivä",
+        "nature": "Luontopäivä",
+        "beach": "Rantapäivä",
+        "culture": "Kulttuuripäivä",
+        "food": "Ruokapäivä"
+      },
+      "slots": {
+        "morning": "Aamu",
+        "afternoon": "Iltapäivä",
+        "evening": "Ilta"
+      },
+      "sections": {
+        "meals": "Ateriat",
+        "transport": "Liikkuminen",
+        "accommodation": "Majoitus",
+        "dailyCost": "Arvioitu päivän hinta"
+      },
+      "activities": {
+        "arrival": "Saapuminen",
+        "checkIn": "Sisäänkirjautuminen",
+        "departure": "Lähtö",
+        "cityWalk": "Kävely kaupungilla",
+        "museum": "Museokäynti",
+        "market": "Paikallinen tori",
+        "viewpoint": "Näköalapaikka",
+        "beach": "Ranta-aika",
+        "nature": "Luontoretki",
+        "spa": "Spa tai hyvinvointi",
+        "shopping": "Ostokset",
+        "photoWalk": "Valokuvakävely",
+        "nightlife": "Iltaulkoilu",
+        "localFood": "Paikallista ruokaa",
+        "evening": "Iltaohjelma"
+      },
+      "activityDetails": {
+        "arrival": "Saavutaan ja asettaudutaan.",
+        "checkIn": "Kirjaudu sisään ja jätä matkatavarat.",
+        "departure": "Kotimatkan päivä.",
+        "cityWalk": "Kävely keskustassa.",
+        "museum": "Museo- tai kulttuurikäynti.",
+        "market": "Paikallinen tori.",
+        "viewpoint": "Näkymä kaupunkiin tai rannikolle.",
+        "beach": "Aikaa veden äärellä.",
+        "nature": "Retki lähiluontoon.",
+        "spa": "Rauhallinen spa-hetki.",
+        "shopping": "Aikaa paikallisille kaupoille.",
+        "photoWalk": "Hitaampi kävely kuvia varten.",
+        "nightlife": "Ilta kaupunginosassa tai paikassa.",
+        "localFood": "Maistellaan paikallisia ruokia.",
+        "evening": "Rauhallinen iltaohjelma."
+      },
+      "meals": {
+        "breakfast": "Aamiainen",
+        "lunch": "Paikallinen ravintola",
+        "dinner": "Illallinen",
+        "streetFood": "Katukeittiö",
+        "fineDining": "Fine dining"
+      },
+      "cost": {
+        "title": "Matkan kokonaishinta",
+        "demoNote": "Summat ovat esimerkkien arvioita suunnittelua varten.",
+        "transport": "Liikenne",
+        "accommodation": "Majoitus",
+        "baggage": "Matkatavarat",
+        "food": "Ruoka",
+        "localTransport": "Paikallisliikenne",
+        "activities": "Aktiviteetit",
+        "insurance": "Vakuutus",
+        "visa": "Viisumi",
+        "other": "Muut",
+        "total": "Arvioitu yhteensä"
+      },
+      "budget": {
+        "title": "Vertailu budjettiin",
+        "yourBudget": "Budjettisi",
+        "estimated": "Arvioitu matkan hinta",
+        "remaining": "Jäljellä",
+        "over": "Arvioitu hinta ylittää budjettisi {{amount}}."
+      }
+    },
+    "options": {
+      "title": "Matkavaihtoehdot",
+      "demoNotice": "Nämä ovat esimerkkimatkoja arvioituine kokonaishintoineen — ei oikeita varauksia.",
+      "finding": "Etsitään muita matkavaihtoehtoja…",
+      "generateOther": "Luo muita matkoja",
+      "viewTrip": "Avaa matka",
+      "selectToCompare": "Valitse vertailuun",
+      "selectedCount_one": "{{count}} matka valittu",
+      "selectedCount_other": "{{count}} matkaa valittu",
+      "selectHint": "Valitse vähintään kaksi matkaa vertailuun.",
+      "compare": "Vertaa valittuja",
+      "compareTitle": "Vertaa matkoja",
+      "dates": "Ajankohta",
+      "duration": "Kesto",
+      "highlightsLabel": "Kohokohdat",
+      "estimatedTotal": "Arvioitu yhteensä",
+      "flightFrom": "Lento: {{origin}}",
+      "stars": "{{count}}★ hotelli",
+      "backToOptions": "Takaisin vaihtoehtoihin",
+      "backToTrip": "Takaisin matkaan",
+      "changeStay": "Vaihda majoitus",
+      "stayPickerNotice": "Esimerkkimajoituksia tälle kohteelle, päiville ja ryhmälle.",
+      "loadingStays": "Ladataan muita majoituksia…",
+      "currentStay": "Nykyinen valinta",
+      "chooseStay": "Valitse tämä majoitus",
+      "showByDay": "Näytä päiväohjelma",
+      "outbound": "Meno",
+      "return": "Paluu",
+      "departureTime": "Lähtö",
+      "arrivalTime": "Saapuminen",
+      "direct": "Suora",
+      "modes": {
+        "flight": "Lento",
+        "train": "Juna",
+        "bus": "Bussi",
+        "ferry": "Lautta",
+        "public_transport": "Julkinen liikenne",
+        "taxi": "Taksi",
+        "rental_car": "Vuokra-auto",
+        "walk": "Kävely"
+      },
+      "highlights": {
+        "beach": "Ranta",
+        "culture": "Kulttuuri",
+        "food": "Ruoka",
+        "history": "Historia",
+        "ocean": "Meri",
+        "city": "Kaupunki",
+        "relaxation": "Rentoutuminen",
+        "nature": "Luonto"
+      },
+      "tags": {
+        "beach": "Ranta",
+        "culture": "Kulttuuri",
+        "food": "Ruoka",
+        "history": "Historia",
+        "ocean": "Meri",
+        "city": "Kaupunki",
+        "relaxation": "Rentoutuminen",
+        "nature": "Luonto"
+      }
+    },
+    "stops": {
+      "hotel": "Hotelli",
+      "city_center": "Keskusta",
+      "old_town": "Vanhakaupunki",
+      "museum": "Museo",
+      "market": "Paikallinen tori",
+      "viewpoint": "Näköalapaikka",
+      "park": "Puisto",
+      "beach": "Ranta",
+      "nature_spot": "Luontokohde kaupungin ulkopuolella",
+      "restaurant": "Ravintola"
+    }
+  },
+  "transportation": {
+    "question": "Miten haluat liikkua perillä?",
+    "hint": "Valintasi vaikuttaa päivittäisiin reitteihin ja kustannusarvioon.",
+    "willShow": "Tämä vaihtoehto näyttää:",
+    "modes": {
+      "public_transport": {
+        "title": "Julkinen liikenne",
+        "description": "Metro, bussi, raitiovaunu, juna ja paikalliset matkakortit.",
+        "details": {
+          "passes": "Sopivat matkaliput ja niiden hinnat",
+          "official": "Viralliset liikennepalvelut",
+          "payment": "Maksutavat",
+          "validity": "Voimassaoloaika ja vyöhykkeet",
+          "link": "Linkki viralliseen palveluun tai kumppanille"
+        }
+      },
+      "taxi": {
+        "title": "Taksi / kyytipalvelu",
+        "description": "Palvelut, jotka oikeasti toimivat kohteessasi, esim. Uber, Bolt tai paikalliset taksit.",
+        "details": {
+          "availability": "Mitkä palvelut ovat käytettävissä kaupungissa",
+          "price": "Arvioidut hinnat",
+          "rating": "Arviot ja ominaisuudet",
+          "link": "Linkki palveluun"
+        }
+      },
+      "rental_car": {
+        "title": "Vuokra-auto",
+        "description": "Vapaus tutustua paikkoihin kauempana keskustasta.",
+        "details": {
+          "companies": "Vuokrayhtiöt, hinnat ja ehdot",
+          "deposit": "Takuumaksu ja vakuutus",
+          "carType": "Autotyyppi",
+          "oneWay": "Nouto ja palautus eri paikoissa",
+          "runningCosts": "Polttoaine, pysäköinti ja tietullit kokonaishinnassa"
+        }
+      }
+    },
+    "vehicle": {
+      "metro": "Metro",
+      "bus": "Bussi",
+      "tram": "Raitiovaunu",
+      "train": "Juna",
+      "ferry": "Lautta",
+      "taxi": "Taksi",
+      "car": "Auto",
+      "walk": "Kävely"
+    }
+  },
+  "trip": {
+    "title": "Matkani",
+    "open": "Avaa matkan yhteenveto",
+    "close": "Sulje matkan yhteenveto",
+    "closeAction": "Sulje",
+    "empty": "Ei matkaa vielä. Lisää kuljetus tai majoitus hakutuloksista.",
+    "destination": "Kohde",
+    "destinationUnset": "Ei vielä valittu",
+    "dates": "Ajankohta",
+    "datesUnset": "Päiviä ei ole vielä asetettu",
+    "datesRange": "{{from}} – {{to}}",
+    "travelers": "Matkustajat",
+    "transport": "Liikenne",
+    "transportEmpty": "Ei valittua kuljetusta",
+    "accommodation": "Majoitus",
+    "accommodationEmpty": "Ei valittua majoitusta",
+    "itemPrice": "Kohteen hinta",
+    "estimatedTotal": "Arvioitu kokonaishinta",
+    "add": "Lisää matkaan",
+    "added": "Lisätty matkaan",
+    "removed": "Poistettu matkasta",
+    "cleared": "Matka tyhjennetty",
+    "inTrip": "Matkassasi",
+    "removeTransport": "Poista kuljetus",
+    "removeAccommodation": "Poista majoitus",
+    "clear": "Tyhjennä matka",
+    "warningDestination": "Tämän kohteen suunta poikkeaa nykyisestä matkasta. Molemmat säilytetään.",
+    "warningDates": "Tämän kohteen päivät poikkeavat nykyisestä matkasta. Molemmat säilytetään.",
+    "items_one": "{{count}} kohde",
+    "items_other": "{{count}} kohdetta"
+  },
+  "filters": {
+    "show": "Suodattimet",
+    "hide": "Piilota suodattimet",
+    "clearAll": "Tyhjennä kaikki",
+    "remove": "Poista {{label}}"
+  },
+  "notFound": {
+    "title": "Sivua ei löytynyt",
+    "description": "Etsimääsi sivua ei ole olemassa tai se on siirretty.",
+    "backHome": "Takaisin etusivulle"
+  },
+  "footer": {
+    "description": "Tekoälypohjainen matkasuunnittelija, joka vertailee lentoja, majoituksia, matkoja ja paikallista liikennettä, jotta voit suunnitella koko matkan yhdessä paikassa.",
+    "productTitle": "Palvelu",
+    "affiliateDisclosure": "Emme myy lippuja tai majoitusta. Vertailemme vaihtoehtoja ja ohjaamme sinut luotettaville kumppaneille varaamaan. Voimme saada komission ilman lisäkuluja sinulle.",
+    "rights": "© {{year}} AI Travel Planner"
+  }
+}

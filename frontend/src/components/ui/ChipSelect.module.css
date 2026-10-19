@@ -1,0 +1,62 @@
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chip {
+  position: relative;
+}
+
+.chipLabel {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.chip:hover .chipLabel {
+  border-color: var(--color-primary);
+}
+
+.chip input:checked + .chipLabel {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.chip input:focus-visible + .chipLabel {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.compact {
+  gap: 0.35rem;
+}
+
+.compact .chipLabel {
+  min-height: 32px;
+  padding: 0.2rem 0.65rem;
+  font-size: var(--font-size-xs);
+}
+
+@media (max-width: 768px) {
+  .chipLabel {
+    min-height: 40px;
+  }
+
+  .compact .chipLabel {
+    min-height: 36px;
+  }
+}

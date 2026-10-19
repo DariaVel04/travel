@@ -1,0 +1,9 @@
+/* Shared surface style. Import with `import card from '@/components/ui/Card.module.css'`. */
+.card {
+  padding: clamp(var(--space-4), 2.2vw, var(--space-5));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  min-width: 0;
+}

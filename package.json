@@ -1,0 +1,24 @@
+{
+  "name": "travel-platform",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "frontend",
+    "backend",
+    "database"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w frontend",
+    "dev:frontend": "npm run dev -w frontend",
+    "dev:backend": "npm run dev -w backend",
+    "build": "npm run build -w frontend",
+    "build:frontend": "npm run build -w frontend",
+    "build:backend": "npm run build -w backend",
+    "typecheck": "npm run typecheck -w frontend && npm run typecheck -w backend",
+    "lint": "npm run lint -w frontend && npm run lint -w backend",
+    "db:up": "docker compose up -d",
+    "prisma:generate": "npm run prisma:generate -w database",
+    "prisma:migrate": "npm run prisma:migrate -w database",
+    "prisma:studio": "npm run prisma:studio -w database"
+  }
+}

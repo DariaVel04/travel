@@ -1,0 +1,25 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding-block: var(--space-7);
+  text-align: center;
+}
+
+.code {
+  font-size: clamp(3rem, 12vw, 4.5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--color-primary);
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+}
+
+.description {
+  margin-bottom: var(--space-3);
+  color: var(--color-text-muted);
+}
