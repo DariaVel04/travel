@@ -2,6 +2,14 @@
 node_modules/
 dist/
 dist-ssr/
+*.tsbuildinfo
+
+# Local brainstorming session state (pids, logs, preview HTML).
+# Copies already tracked by Git stay tracked until removed from the index.
+.superpowers/
+
+
+documents/
 
 # Secrets — keep example files
 .env
