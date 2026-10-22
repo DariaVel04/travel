@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Travel Platform
 
 ```
@@ -35,3 +36,6 @@ The UI talks to the API over HTTP. The API talks to MySQL through Prisma. The fr
 Optional: `cp frontend/.env.example frontend/.env` to set `VITE_API_URL` (defaults to `http://localhost:4000`).
 
 Prisma Studio: `npm run prisma:studio`.
+=======
+# Ai travel planner
+>>>>>>> 289a11b237ba9bee3cd6062ad6a162e4c29872df
