@@ -131,6 +131,7 @@
     "hero": {
       "badge": "Aperçu anticipé",
       "title": "Planifiez tout votre voyage avec l'IA",
+      "script": "commence ici",
       "subtitle": "Nous comparons vols, hébergements, séjours organisés et moyens de transport — et montrons quelle option est vraiment la meilleure pour tout votre voyage, pas seulement le billet le moins cher."
     },
     "search": {
@@ -172,6 +173,9 @@
         "description": "Sachez si un prix est bon en le comparant aux prix historiques et aux tendances.",
         "example": "Maintenant {{current}} · habituellement {{average}}"
       },
+      "placesTitle": "Des lieux que le planificateur connaît déjà",
+      "placesNote": "Ouvre le planificateur. Les prix n'apparaissent qu'après la création d'un voyage.",
+      "placesScript": "vaut le détour",
       "tourDeals": {
         "title": "Offres séjours et charters",
         "description": "Comparez vol et hôtel réservés séparément avec les forfaits des tour-opérateurs et les vols charter.",

@@ -33,7 +33,7 @@
 .chip input:checked + .chipLabel {
   background: var(--color-primary-soft);
   border-color: var(--color-primary);
-  color: var(--color-primary);
+  color: var(--color-primary-text);
 }
 
 .chip input:focus-visible + .chipLabel {

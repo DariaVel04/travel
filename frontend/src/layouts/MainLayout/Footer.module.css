@@ -41,7 +41,7 @@
 }
 
 .links a:hover {
-  color: var(--color-primary);
+  color: var(--color-primary-text);
 }
 
 .bottom {

@@ -1,22 +1,35 @@
 .header {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: var(--space-3);
-  padding-block: var(--space-6) var(--space-5);
+  min-height: 13rem;
+  margin-block: var(--space-5) var(--space-5);
+  padding: var(--space-6);
+  border-radius: 28px;
+  background:
+    linear-gradient(105deg, rgb(7 11 28 / 0.88) 0%, rgb(7 11 28 / 0.45) 70%),
+    url('https://images.unsplash.com/photo-1533105079780-92b9be482077?w=1600&auto=format&fit=crop&q=70')
+      center 40% / cover no-repeat;
+  color: #fff;
 }
 
 .title {
-  font-size: var(--font-size-2xl);
+  max-width: 16ch;
+  font-size: clamp(2rem, 1.3rem + 2.4vw, 3.25rem);
+  font-weight: 800;
 }
 
 .subtitle {
-  max-width: 60ch;
+  max-width: 58ch;
   font-size: var(--font-size-md);
-  color: var(--color-text-muted);
+  color: rgb(255 255 255 / 0.78);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 640px) {
   .header {
-    padding-block: var(--space-5) var(--space-4);
+    min-height: 11rem;
+    padding: var(--space-5);
+    border-radius: 20px;
   }
 }

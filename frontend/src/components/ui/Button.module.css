@@ -39,8 +39,9 @@
 }
 
 .primary {
-  background: var(--color-primary);
+  background: linear-gradient(135deg, #7d6fff, var(--color-primary));
   color: var(--color-on-primary);
+  box-shadow: var(--shadow-glow);
 }
 
 .primary:hover:not(:disabled) {
@@ -48,14 +49,14 @@
 }
 
 .secondary {
-  background: var(--color-surface);
+  background: transparent;
   border-color: var(--color-border-strong);
   color: var(--color-text);
 }
 
 .secondary:hover:not(:disabled) {
   border-color: var(--color-primary);
-  color: var(--color-primary);
+  color: var(--color-primary-text);
   background: var(--color-primary-soft);
 }
 
@@ -65,7 +66,7 @@
 }
 
 .ghost:hover:not(:disabled) {
-  background: var(--color-surface-muted);
+  background: var(--color-hover);
 }
 
 .fullWidth {

@@ -12,7 +12,7 @@
   font-weight: var(--font-weight-bold);
   line-height: 1;
   letter-spacing: -0.04em;
-  color: var(--color-primary);
+  color: var(--color-primary-text);
 }
 
 .title {

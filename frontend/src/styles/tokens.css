@@ -4,42 +4,52 @@
  * or a dark theme later means changing only this file.
  */
 :root {
-  /* Colors — coastal editorial: paper, ink, one sea green */
-  --color-bg: #f4efe6;
-  --color-surface: #fffdf8;
-  --color-surface-muted: #f4efe6;
-  --color-text: #1c1915;
-  --color-text-muted: #6b6258;
-  --color-border: #e4d9c8;
-  --color-border-strong: #d7cbb8;
+  color-scheme: dark;
 
-  --color-primary: #1f6f5b;
-  --color-primary-hover: #184f42;
-  --color-primary-soft: #e5f2ed;
+  /* Colors — night travel: deep navy, glass surfaces, one violet */
+  --color-bg: #0b1026;
+  --color-surface: #141a36;
+  --color-surface-muted: #1b2244;
+  --color-text: #eef0ff;
+  --color-text-muted: #9aa0c3;
+  --color-border: #262e57;
+  --color-border-strong: #343d6e;
+
+  --color-primary: #6d5efc;
+  --color-primary-hover: #5a4ae8;
+  --color-primary-soft: #252a63;
   --color-on-primary: #ffffff;
+  --color-primary-text: #b3aaff;
 
-  --color-accent: #9a4f2e;
-  --color-accent-soft: #f6eee9;
-  --color-accent-text: #7c3d22;
+  --color-accent: #f2a65a;
+  --color-accent-soft: #3a2c2a;
+  --color-accent-text: #f6c08a;
 
-  --color-success: #1b6b4a;
-  --color-success-soft: #e6f4ed;
-  --color-warning: #8a5800;
-  --color-warning-soft: #faf0dc;
-  --color-danger: #b42318;
-  --color-danger-soft: #f8e8e6;
+  --color-success: #4cd3a0;
+  --color-success-soft: #173a3a;
+  --color-warning: #f4c05b;
+  --color-warning-soft: #3a3222;
+  --color-danger: #ff7a7a;
+  --color-danger-soft: #3d1f33;
 
-  --color-hero: #16382f;
-  --color-hero-from: #16382f;
-  --color-hero-to: #1f6f5b;
-  --color-on-hero: #f6f1e7;
+  --color-hero: #0b1026;
+  --color-hero-from: #1a1550;
+  --color-hero-to: #0b1026;
+  --color-on-hero: #ffffff;
 
-  --color-focus: #1f6f5b;
+  --color-glass: rgb(20 26 54 / 0.72);
+  --color-glass-border: rgb(255 255 255 / 0.09);
+  --color-overlay: rgb(5 8 22 / 0.6);
+  --color-hover: rgb(255 255 255 / 0.06);
+
+  --color-focus: #8b7fff;
   --focus-ring: 2px solid var(--color-focus);
   --focus-offset: 2px;
 
   /* Typography */
-  --font-serif: 'Source Serif 4', Georgia, 'Iowan Old Style', Palatino, serif;
+  --font-hand: 'Caveat', 'Segoe Script', cursive;
+  --font-display:
+    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-sans:
     'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-size-xs: 0.75rem;
@@ -48,11 +58,11 @@
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.375rem;
   --font-size-2xl: 1.75rem;
-  --font-size-hero: clamp(1.9rem, 1.2rem + 2.5vw, 3rem);
+  --font-size-hero: clamp(2.2rem, 1.3rem + 3vw, 3.6rem);
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --leading-tight: 1.2;
+  --leading-tight: 1.15;
   --leading-body: 1.6;
 
   /* Spacing scale */
@@ -67,15 +77,16 @@
 
   /* Shape & depth */
   --radius-sm: 8px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
   --radius-full: 999px;
-  --shadow-sm: 0 1px 2px rgb(28 25 21 / 0.05);
-  --shadow-md: 0 6px 20px rgb(28 25 21 / 0.07);
-  --shadow-lg: 0 18px 40px rgb(28 25 21 / 0.1);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.25);
+  --shadow-md: 0 10px 30px rgb(0 0 0 / 0.35);
+  --shadow-lg: 0 24px 60px rgb(0 0 0 / 0.45);
+  --shadow-glow: 0 8px 24px rgb(109 94 252 / 0.35);
 
   /* Layout */
-  --container-width: 1140px;
+  --container-width: 1180px;
   --container-padding: clamp(1.15rem, 0.7rem + 1.8vw, 2rem);
   --header-height: 68px;
   --control-height: 44px;

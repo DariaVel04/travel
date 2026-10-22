@@ -1,4 +1,5 @@
-import { Outlet, ScrollRestoration } from 'react-router';
+import { ScrollRestoration } from 'react-router';
+import { PageTransition } from '@/components/motion/PageTransition';
 import { AuthProvider } from '@/features/auth/context/AuthContext';
 import { TripProvider } from '@/features/trips/TripProvider';
 import { Footer } from './Footer';
@@ -12,7 +13,7 @@ export function MainLayout() {
         <div className={styles.layout}>
           <Header />
           <main className={styles.main}>
-            <Outlet />
+            <PageTransition />
           </main>
           <Footer />
           <ScrollRestoration />

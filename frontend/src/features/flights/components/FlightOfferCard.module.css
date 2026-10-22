@@ -1,7 +1,38 @@
+/* Offer cards stay light on the dark page, so they re-scope the palette. */
 .card {
+  color-scheme: light;
+  --card-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f4f5fb;
+  --color-text: #141838;
+  --color-text-muted: #5f6488;
+  --color-border: #e4e6f3;
+  --color-border-strong: #d3d6ea;
+  --color-primary-soft: #ecebff;
+  --color-primary-text: #5a4ae8;
+  --color-success: #11845b;
+  --color-success-soft: #e3f6ee;
+  --color-warning: #8a5800;
+  --color-warning-soft: #fbf1dc;
+  --color-danger: #c4321f;
+  --color-danger-soft: #fbe9e7;
+  --color-accent-soft: #fdf0e6;
+  --color-accent-text: #9a4f2e;
+  --color-hover: rgb(20 24 56 / 0.05);
+  border-color: transparent;
+  border-radius: 26px;
+  padding: var(--space-4) var(--space-4) var(--space-4) var(--space-5);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 13.5rem;
-  gap: var(--space-4);
+  grid-template-columns: minmax(0, 1fr) 14rem;
+  gap: 0;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 .main {
@@ -100,9 +131,39 @@
 }
 
 .line {
+  position: relative;
   width: 100%;
-  height: 1px;
-  background: var(--color-border-strong);
+  height: 0;
+  border-top: 2px dashed #c5c9e2;
+}
+
+.line::before,
+.line::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #6d5efc;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.line::before {
+  left: 0;
+}
+
+.line::after {
+  right: 0;
+  background: #6d5efc;
+  box-shadow: 0 0 0 4px rgb(109 94 252 / 0.2);
+  animation: hop 2.4s ease-in-out infinite;
+}
+
+@keyframes hop {
+  50% {
+    transform: translateY(-4px);
+  }
 }
 
 .duration {
@@ -128,8 +189,9 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+  margin-left: var(--space-4);
   padding-left: var(--space-4);
-  border-left: 1px solid var(--color-border);
+  border-left: 1px dashed #d3d6ea;
 }
 
 .priceLabel {
@@ -139,9 +201,9 @@
 }
 
 .price {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
+  font-weight: 800;
   letter-spacing: -0.03em;
 }
 
@@ -151,7 +213,7 @@
 
 .breakdown summary {
   cursor: pointer;
-  color: var(--color-primary);
+  color: var(--color-primary-text);
   font-weight: var(--font-weight-medium);
 }
 
@@ -179,16 +241,27 @@
   text-align: center;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .line::after {
+    animation: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
+
 @media (max-width: 768px) {
   .card {
     grid-template-columns: 1fr;
   }
 
   .side {
+    margin-left: 0;
     padding-left: 0;
     padding-top: var(--space-4);
     border-left: 0;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px dashed #d3d6ea;
   }
 }
 

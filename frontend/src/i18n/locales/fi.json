@@ -128,6 +128,7 @@
     "hero": {
       "badge": "Varhainen esiversio",
       "title": "Suunnittele koko matkasi tekoälyn avulla",
+      "script": "alkaa tästä",
       "subtitle": "Vertailemme lentoja, majoituksia, pakettimatkoja ja liikkumistapoja — ja näytämme, mikä vaihtoehto on oikeasti paras koko matkallesi, ei vain halvin lippu."
     },
     "search": {
@@ -169,6 +170,9 @@
         "description": "Tiedä, onko hinta hyvä, vertaamalla sitä aiempiin hintoihin ja trendeihin.",
         "example": "Nyt {{current}} · yleensä {{average}}"
       },
+      "placesTitle": "Paikkoja, jotka suunnittelija jo tuntee",
+      "placesNote": "Avaa lomasuunnittelijan. Hinnat näkyvät vasta, kun luot matkan.",
+      "placesScript": "kannattaa poiketa",
       "tourDeals": {
         "title": "Matkanjärjestäjien ja tilauslentojen tarjoukset",
         "description": "Vertaa erikseen varattuja lentoja ja hotellia matkanjärjestäjien pakettimatkoihin ja tilauslentoihin.",

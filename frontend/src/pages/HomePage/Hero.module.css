@@ -1,51 +1,165 @@
 .hero {
-  padding-block: clamp(var(--space-6), 6vw, 4.25rem);
-  background:
-    linear-gradient(180deg, rgb(22 56 47 / 0.18), transparent 42%),
-    linear-gradient(135deg, var(--color-hero-from), var(--color-hero-to));
+  position: relative;
+  min-height: min(92vh, 860px);
+  display: flex;
+  align-items: flex-end;
+  padding-top: calc(var(--header-height) + var(--space-7));
+  padding-bottom: var(--space-7);
+  overflow: hidden;
   color: var(--color-on-hero);
+  background: #070b1c;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 72% 40%;
+}
+
+.scene::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(7 11 28 / 0.92) 0%, rgb(7 11 28 / 0.72) 42%, rgb(7 11 28 / 0.18) 100%),
+    linear-gradient(180deg, rgb(7 11 28 / 0.35) 0%, transparent 28%, #070b1c 100%);
+}
+
+.route {
+  position: absolute;
+  z-index: 1;
+  top: 12%;
+  right: 4%;
+  width: min(46vw, 640px);
+  height: auto;
+  opacity: 0.9;
+}
+
+.routePath {
+  stroke: #fff;
+  stroke-width: 1.6;
+  stroke-dasharray: 8 8;
+  stroke-linecap: round;
+  animation: dash 18s linear infinite;
+}
+
+.marker,
+.markerEnd {
+  fill: #fff;
+}
+
+.markerEnd {
+  fill: #8b7fff;
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.floatPlane {
+  position: absolute;
+  z-index: 1;
+  top: 18%;
+  right: 18%;
+  font-size: 1.4rem;
+  animation: drift 7s ease-in-out infinite;
 }
 
 .inner {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
+  width: 100%;
 }
 
-.text {
+.copy {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-4);
-  max-width: 42rem;
+  width: min(100%, 40rem);
+  min-width: 0;
 }
 
 .badge {
   padding: 0.3rem 0.75rem;
-  border: 1px solid rgb(255 255 255 / 0.22);
   border-radius: var(--radius-full);
+  background: rgb(109 94 252 / 0.85);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgb(255 255 255 / 0.88);
 }
 
 .title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  max-width: 100%;
   font-size: var(--font-size-hero);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: -0.035em;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.script {
+  font-family: var(--font-hand);
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #c4b8ff;
+  transform: rotate(-6deg);
+  transform-origin: left center;
 }
 
 .subtitle {
-  max-width: 54ch;
-  font-size: var(--font-size-md);
-  line-height: 1.65;
-  color: rgb(255 255 255 / 0.78);
+  max-width: 46ch;
+  font-size: var(--font-size-lg);
+  line-height: 1.55;
+  color: rgb(255 255 255 / 0.82);
 }
 
-@media (max-width: 375px) {
+@keyframes dash {
+  to {
+    stroke-dashoffset: -320;
+  }
+}
+
+@keyframes drift {
+  50% {
+    transform: translate(12px, -10px);
+  }
+}
+
+@media (max-width: 768px) {
   .hero {
-    padding-block: var(--space-6);
+    min-height: 0;
+    padding-bottom: var(--space-6);
+  }
+
+  .photo {
+    object-position: 60% 30%;
+  }
+
+  .route,
+  .floatPlane {
+    display: none;
+  }
+
+  .subtitle {
+    font-size: var(--font-size-md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .routePath,
+  .floatPlane {
+    animation: none;
   }
 }

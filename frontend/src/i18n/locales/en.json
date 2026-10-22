@@ -128,6 +128,7 @@
     "hero": {
       "badge": "Early preview",
       "title": "Plan your entire trip with AI",
+      "script": "starts here",
       "subtitle": "We compare flights, stays, tour packages and ways to get around — and show which option is truly best for your whole trip, not just the cheapest ticket."
     },
     "search": {
@@ -169,6 +170,9 @@
         "description": "Know whether a price is good by comparing it with historical prices and trends.",
         "example": "Now {{current}} · usually {{average}}"
       },
+      "placesTitle": "Places the planner already knows",
+      "placesNote": "Opens in the vacation planner. Prices appear only after you generate a trip.",
+      "placesScript": "worth the detour",
       "tourDeals": {
         "title": "Tour & Charter Deals",
         "description": "Compare booking flight and hotel separately with tour operator packages and charter flights.",

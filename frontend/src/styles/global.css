@@ -26,7 +26,11 @@ body {
   font-weight: 400;
   line-height: var(--leading-body);
   color: var(--color-text);
-  background: var(--color-bg);
+  background:
+    radial-gradient(60rem 40rem at 85% -10%, rgb(109 94 252 / 0.16), transparent 60%),
+    radial-gradient(50rem 36rem at -10% 30%, rgb(56 88 220 / 0.12), transparent 60%),
+    var(--color-bg);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   font-feature-settings: 'ss01' on, 'cv11' on;
 }
@@ -50,20 +54,20 @@ button {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-primary-text);
 }
 
 a:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-primary-text);
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   line-height: var(--leading-tight);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: -0.025em;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.03em;
   overflow-wrap: anywhere;
 }
 
@@ -84,7 +88,7 @@ fieldset {
 }
 
 ::selection {
-  background: var(--color-primary-soft);
+  background: rgb(109 94 252 / 0.45);
   color: var(--color-text);
 }
 
@@ -98,7 +102,7 @@ textarea {
   padding: var(--space-2) 0.85rem;
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-md);
-  background: var(--color-surface);
+  background: var(--color-surface-muted);
   transition:
     border-color var(--transition-fast),
     box-shadow var(--transition-fast);
@@ -114,8 +118,13 @@ input:not([type='checkbox'], [type='radio']):focus-visible,
 select:focus-visible,
 textarea:focus-visible {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px var(--color-primary-soft);
+  box-shadow: 0 0 0 3px rgb(109 94 252 / 0.3);
   outline: none;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  accent-color: var(--color-primary);
 }
 
 input:not([type='checkbox'], [type='radio']):disabled,

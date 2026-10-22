@@ -1,37 +1,44 @@
 .search {
+  color-scheme: light;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f3f4fb;
+  --color-text: #141838;
+  --color-text-muted: #5c6284;
+  --color-border: #e3e5f2;
+  --color-border-strong: #d0d3e6;
+  --color-primary-soft: #ecebff;
+  --color-primary-text: #4d3fe0;
+  --color-hover: rgb(20 24 56 / 0.06);
   position: relative;
-  z-index: 1;
-  max-width: 52rem;
-  color: var(--color-text);
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  z-index: 3;
+  max-width: 68rem;
+  color: #141838;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 24px 60px rgb(0 0 0 / 0.35);
 }
 
 .tabs {
   display: flex;
-  gap: 4px;
-  padding: var(--space-2);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  background: var(--color-surface-muted);
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-3) 0;
 }
 
 .tab {
-  padding: 0.6rem 1rem;
-  border: 0;
-  border-radius: 8px;
+  min-width: 0;
+  padding: 0.55rem 0.95rem;
+  white-space: normal;
+  border: 1px solid transparent;
+  border-radius: 999px;
   background: transparent;
-  color: var(--color-text-muted);
+  color: #5c6284;
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
-  transition:
-    background-color var(--transition-fast),
-    color var(--transition-fast),
-    box-shadow var(--transition-fast);
+  font-weight: var(--font-weight-semibold);
 }
 
 .tab:hover {
-  color: var(--color-text);
+  background: #f3f4fb;
+  color: #141838;
 }
 
 .tab:focus-visible {
@@ -41,29 +48,28 @@
 
 .activeTab,
 .activeTab:hover {
-  background: var(--color-surface);
-  color: var(--color-text);
-  font-weight: var(--font-weight-semibold);
-  box-shadow: var(--shadow-sm);
+  background: #141838;
+  color: #fff;
 }
 
 .panel {
-  padding: var(--space-5);
+  padding: var(--space-4) var(--space-5) var(--space-5);
 }
 
 .form {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
-  align-items: start;
-  gap: var(--space-4);
+  align-items: end;
+  gap: var(--space-3);
 }
 
 .submit {
   align-self: end;
+  min-width: 10rem;
 }
 
 .plannerForm {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(8rem, 12rem) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(8rem, 11rem) auto;
 }
 
 @media (max-width: 768px) {
@@ -83,7 +89,6 @@
   .tab {
     flex: 1;
     min-height: 44px;
-    padding-inline: var(--space-3);
   }
 }
 

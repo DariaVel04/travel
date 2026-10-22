@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
 import { paths } from '@/app/paths';
 import { Badge } from '@/components/ui/Badge';
-import card from '@/components/ui/Card.module.css';
 import { useLocale } from '@/hooks/useLocale';
 import { cx } from '@/utils/classNames';
 import { formatMoney, money } from '@/utils/money';
@@ -85,7 +84,7 @@ export function FeaturesPreview() {
 
       <ul className={styles.grid}>
         {features.map((feature) => (
-          <li key={feature.id} className={cx(card.card, styles.card)}>
+          <li key={feature.id} className={styles.item}>
             <span className={styles.icon} aria-hidden="true">
               {feature.icon}
             </span>

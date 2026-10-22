@@ -128,6 +128,7 @@
     "hero": {
       "badge": "Frühe Vorschau",
       "title": "Plane deine ganze Reise mit KI",
+      "script": "beginnt hier",
       "subtitle": "Wir vergleichen Flüge, Unterkünfte, Pauschalreisen und Fortbewegungsmöglichkeiten — und zeigen, welche Option für deine gesamte Reise wirklich am besten ist, nicht nur das günstigste Ticket."
     },
     "search": {
@@ -169,6 +170,9 @@
         "description": "Erkenne, ob ein Preis gut ist, im Vergleich mit historischen Preisen und Trends.",
         "example": "Jetzt {{current}} · üblich {{average}}"
       },
+      "placesTitle": "Orte, die der Planer schon kennt",
+      "placesNote": "Öffnet den Urlaubsplaner. Preise erscheinen erst, wenn du eine Reise erstellst.",
+      "placesScript": "einen Umweg wert",
       "tourDeals": {
         "title": "Pauschal- und Charterangebote",
         "description": "Vergleiche einzeln gebuchte Flüge und Hotels mit Pauschalreisen von Reiseveranstaltern und Charterflügen.",

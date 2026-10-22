@@ -25,7 +25,9 @@ import { useCurrentTrip } from '@/features/trips/tripContext';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 import { resolveLocations } from '@/services/locations/locationService';
 import { tripPlanningService } from '@/services/planner/plannerService';
+import { TRIP_DESTINATION_TEMPLATES } from '@/services/planner/tripOptionCatalog';
 import type { LocationType, TravelLocation } from '@/types/location';
+import styles from './PlannerPage.module.css';
 
 const PLANNER_PLACE_TYPES = new Set<LocationType>(PLANNER_LOCATION_TYPES);
 
@@ -165,12 +167,22 @@ export function PlannerPage() {
   return (
     <div className="container">
       <PageHeader title={t('planner.pageTitle')} subtitle={t('planner.pageSubtitle')} />
-      <div hidden={stage !== 'form'}>
+      <div className={styles.composer} hidden={stage !== 'form'}>
         <PlannerForm
           initialValues={initialValues}
           isGenerating={loading === 'options'}
           onSubmit={(request) => void generateOptions(request, 0)}
         />
+        <aside className={styles.poster}>
+          <img
+            src={
+              TRIP_DESTINATION_TEMPLATES.find((item) => item.destination.id === 'city-TYO')
+                ?.imageUrl ?? ''
+            }
+            alt=""
+          />
+          <p className={styles.script}>{t('home.features.placesScript')}</p>
+        </aside>
       </div>
 
       {loading === 'options' && <Notice>{t('planner.options.finding')}</Notice>}

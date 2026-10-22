@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router';
+import { NavLink, useLocation } from 'react-router';
 import { paths } from '@/app/paths';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher/LanguageSwitcher';
 import { Logo } from '@/components/Logo/Logo';
@@ -13,7 +13,18 @@ import styles from './Header.module.css';
 export function Header() {
   const { t } = useTranslation();
   const { isAuthenticated, isLoading, logout } = useAuth();
+  const location = useLocation();
+  const onHome = location.pathname === paths.home;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    if (!onHome) return;
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [onHome]);
 
   const navItems = [
     { to: paths.home, label: t('nav.home'), end: true },
@@ -25,7 +36,7 @@ export function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className={styles.header}>
+    <header className={cx(styles.header, onHome && styles.overHero, onHome && scrolled && styles.scrolled)}>
       <div className={cx('container', styles.inner)}>
         <Logo />
 
